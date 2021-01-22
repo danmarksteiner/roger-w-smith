@@ -1,0 +1,74 @@
+/* ==========================================================================
+    PRIVACY POLICY STYLES
+   ========================================================================== */
+
+.privacy-policy {
+	background: #fff;
+	
+	.container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		max-width: 830px;
+		margin: auto;
+	}
+
+	h2 {
+		font-family: georgia;
+		color: #000000;
+		margin-top: 25px;
+		margin-bottom: 10px;
+		font-size: 1.75rem;
+		line-height: 2.325rem;
+	}
+
+	h3 {
+		font-family: georgia;
+		color: #000000;
+		margin-top: 25px;
+		margin-bottom: 10px;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.5625rem;
+		margin-bottom:1rem;
+	}
+
+	address {
+		font-size: 1rem;
+		line-height: 1.5625rem;
+		margin-bottom: 0;
+	}
+
+	a {
+		color: #000000;
+		text-decoration: underline;
+		@include transition(0.2s linear);
+		&:hover {
+			color: lighten(#000000, 15%);
+			text-decoration: none;
+		}
+	}
+
+	ul {	
+		& + p {
+			margin: 15px 0px;
+		}
+		li {
+			margin-left: 20px;
+			list-style: disc;
+			font-size: 1rem;
+			line-height: 1.5625rem;
+			margin-bottom: 5px;
+			font-family: georgia;
+			color: #000000;
+		}
+	}
+
+	address {
+		font-family: source_sans_proregular;
+		font-style: normal;
+	}
+}

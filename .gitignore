@@ -1,0 +1,24 @@
+$ cat .gitignore
+
+# Can ignore specific files
+.DS_Store
+.htaccess
+
+# Use wildcards as well
+*~
+*.swp
+
+# Can also ignore all directories and files in a directory.
+tmp/**/* 
+
+# Ignore dirs
+/node_modules/
+/nbproject/
+/public/components/
+/vendor/phpmailer/
+/vendor/facebook/
+/vendor/ircmaxell/
+/vendor/gregwar/
+/vendor/raveren/
+/vendor/
+/.sass-cache/

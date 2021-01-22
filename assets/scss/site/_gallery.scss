@@ -1,0 +1,104 @@
+/* ==========================================================================
+    GALLERY STYLES
+   ========================================================================== */
+.gallery-title {
+	padding: 10px 36px;
+	font-family: josefin_sanssemibold;
+	color: #a1a1a1;
+	text-transform: uppercase;
+	background: #000;
+	border-bottom: 3px solid #b7a389;
+	cursor: pointer;
+	
+	@include phone-portrait {
+		padding: 10px 10px;
+	}
+	@include tablet-portrait {
+		padding: 10px 36px;
+	}
+
+	.title-text {
+		display: inline-block;
+		width: 110px;
+	}
+
+	.icon-arrow {
+		font-size: 12px;
+		position: absolute;
+		transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		@include transition(0.2s ease)
+
+		&.arrow-rotate {
+			transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-webkit-transform: rotate(0deg);
+			@include transition(0.2s ease)
+		}
+	}
+}
+
+
+.thumbnails {
+	background-color: #fff;
+	@include clearfix
+
+	.col {
+		margin-left: 0;
+		background-size: cover;
+		background-position: center center;
+		border: 1px solid #f8f8f8;
+		text-align: center;
+	}
+
+	.hover {
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0);
+		cursor: pointer;
+		text-align: center;
+		@include transition(0.5s ease);
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.9);
+
+			.pdf {
+				color: rgba(183,163,137,1);
+			}
+		}
+
+		.pdf {
+			width: 100%;
+			font-family: josefin_sansregular;
+			font-size: 22px;
+			line-height: initial;
+			color: rgba(183,163,137,0);
+			@include vertical-align(absolute);
+			@include transition(.5s ease);
+
+			strong {
+				font-family: josefin_sansbold;
+				letter-spacing: 5px;
+			}
+		}
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.blank {
+		background-color: rgba(0, 0, 0, 0.07);
+		
+		.hover:hover {
+			background-color: #eeeeee;
+			cursor: initial !important;
+		}
+	}
+}

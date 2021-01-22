@@ -1,0 +1,3 @@
+[06-Jun-2016 10:22:33 UTC] PHP Parse error:  syntax error, unexpected '$message' (T_VARIABLE) in /home/ferefcli/public_html/roger_w_smith/www-update/contact/mailer.php on line 75
+[06-Jun-2016 10:43:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ferefcli/public_html/roger_w_smith/www-update/contact/mailer.php:60) in /home/ferefcli/public_html/roger_w_smith/www-update/contact/mailer.php on line 110
+[06-Jun-2016 10:44:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ferefcli/public_html/roger_w_smith/www-update/contact/mailer.php:60) in /home/ferefcli/public_html/roger_w_smith/www-update/contact/mailer.php on line 110

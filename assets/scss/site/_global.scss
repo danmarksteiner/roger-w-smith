@@ -1,0 +1,340 @@
+/* ==========================================================================
+    GLOBAL STYLES
+   ========================================================================== */
+/* Base Styles */
+/* These styles form the base elements for the site. Most of the values are taken directly from variables setup against the styleguide */
+
+/* Styles every element */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    @include box-sizing(border-box);
+       -webkit-appearance:none;  
+    -webkit-border-radius:0px;
+       -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+/* Body Styles */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height:16px;
+    font-size:16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.body-wrapper.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+/* Type Styles */
+/* Basic HTML elements will use these styles by default */
+/* Paragraphs */
+p{
+    font-family:$fontParagraph;
+}
+/* Headings */
+h1, h2, h3, h4, h5, h6{
+    /* Resets font weight so bold custom font is not overbold */
+    font-weight:400;
+    padding:0;
+}
+h2 a{
+    font-size:2.5rem;
+    line-height:3.25rem;
+}
+/* Links */
+a {
+    color: #b7a389;
+    text-decoration: none;
+}
+/* Images base */
+img {
+    display:block;
+    height: auto;
+}
+
+/* Reset iOS input styling */
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+/* Framework base styles */
+.vert-align{
+    height:100%;
+    display:inline-block;
+    vertical-align:middle;
+}
+.container-fluid {
+    width:100%;
+    position: relative;
+    @include clearfix;
+}
+.container {
+    padding:0 1rem;
+    position: relative;
+    max-width: $containerWidth;
+    margin:auto;
+    @include box-sizing(initial);
+    @include clearfix;
+    @include tablet-landscape{
+        padding:0 3.125rem;
+    }
+}
+.row {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    @include clearfix;
+}
+.col {
+    float: left;
+    display: inline;
+    position: relative;
+    margin-left: 1% * $columnGutter;
+    @include tablet-portrait{
+        /* Disabled on mobile so you don't get 1px line for padding cols */
+        min-height: 1px;
+    }
+    &:first-child {
+        margin-left: 0;
+    }
+}
+.col-xs-12{
+    width:100%;
+    margin-left:0;
+}
+.col-no-margin{
+    margin-left:0 !important;
+}
+.inner{
+    padding:0 1rem;
+    @include clearfix;
+    @include tablet-portrait{
+        padding:0 1.5rem;
+    }
+}
+.inner-mobile{
+    @include clearfix;
+    padding:0 1rem;
+    @include tablet-portrait{
+        padding:0;
+    }
+}
+/* Hiden elements - Hide elements at specified breakpoints */
+@include only-phone-portrait {
+    .xs-hidden {
+        display: none;
+    }
+}
+@include only-phone-landscape {
+    .sm-hidden {
+        display: none;
+    }
+}
+@include only-tablet-portrait {
+    .md-hidden {
+        display: none;
+    }
+}
+@include only-tablet-landscape {
+    .lg-hidden {
+        display: none;
+    }
+}
+@include only-small-desktop {
+    .xl-hidden {
+        display: none;
+    }
+}
+/* Column sizes - Refer to vars.scss for breakpoints and framework.scss for column numbers and gutter values */ 
+@include phone-portrait{
+    @for $i from 1 through $column {
+        .col-xs-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+        }
+        .col-xs-#{$i}-no-margin {
+            $colWidth: (100% / $column) * $i; 
+            width: $colWidth;
+            margin-left:0;
+        }
+    }
+}
+@include phone-landscape{
+    @for $i from 1 through $column {
+        .col-sm-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+        .col-sm-#{$i}-no-margin {
+            $colWidth: (100% / $column) * $i; 
+            width: $colWidth;
+            margin-left:0;
+        }
+    }
+}
+@include tablet-portrait{
+    @for $i from 1 through $column {
+        .col-md-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+        .col-md-#{$i}-no-margin {
+            $colWidth: (100% / $column) * $i; 
+            width: $colWidth;
+            margin-left:0;
+        }
+    }
+}
+@include tablet-landscape{
+    @for $i from 1 through $column {
+        .col-lg-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+        .col-lg-#{$i}-no-margin {
+            $colWidth: (100% / $column) * $i; 
+            width: $colWidth;
+            margin-left:0;
+        }
+    }
+}
+@include small-desktop{
+    @for $i from 1 through $column {
+        .col-xl-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+        .col-xl-#{$i}-no-margin {
+            $colWidth: (100% / $column) * $i; 
+            width: $colWidth;
+            margin-left:0;
+        }
+    }
+}
+@include desktop{
+    @for $i from 1 through $column {
+        .col-xxl-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+        .col-xxl-#{$i}-no-margin {
+            $colWidth: (100% / $column) * $i; 
+            width: $colWidth;
+            margin-left:0;
+        }
+    }
+}
+/* Global Page Styles */
+.page-scroller{
+    a{
+        position:absolute;
+        z-index:3;
+        left:50%;
+        bottom:32px;
+        width:32px;
+        height:32px;
+        margin-left:-16px;
+        cursor:pointer;
+        display:none;
+        @include transition(transform 600ms cubic-bezier(0.785, 0.135, 0.150, 0.860));
+        @include phone-landscape{
+            left:40px;
+        }
+        @include tablet-portrait{
+            left:50%;
+        }
+    }
+}
+.content-wrap{
+    @include tablet-portrait{
+        padding-bottom:684px;
+    }
+    @include small-desktop{
+        padding-bottom:368px;
+    }
+    @include desktop{
+        padding-bottom:404px;
+    }
+}
+.inner-wrap{
+    z-index:2;
+    position: relative;
+}
+
+.desktop-only {
+    display: block;
+    @media (max-width: 1280px) {
+        display: none;
+    }
+}
+
+.mobile-only {
+    display: block;
+    @include small-desktop {
+        display: none;
+    }
+}
+.content-wrap{
+    position:relative;
+}
+/* Animations */
+@-webkit-keyframes fade-offset {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:0.4;
+  }
+}
+
+@keyframes fade-offset {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:0.4;
+  }
+}
+@-webkit-keyframes fade-offset2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes fade-offset2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@-webkit-keyframes bg-scale {
+  0% {
+    @include transform(scale(1));
+  }
+  100% {
+    @include transform(scale(1.1));
+  }
+}
+
+@keyframes bg-scale {
+  0% {
+    @include transform(scale(1));
+  }
+  100% {
+    @include transform(scale(1.05));
+  }
+}

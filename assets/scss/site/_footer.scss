@@ -1,0 +1,234 @@
+/* ==========================================================================
+    FOOTER STYLES
+   ========================================================================== */
+footer{
+    //z-index:-99;
+    nav{
+        margin-bottom:2rem;
+    }
+    h3{
+        color:#fff;
+        margin-bottom:5px;
+        font-family:$fontFooterTitle;
+        @include font-size(20px, 20px, 20px);
+        text-transform:uppercase;
+        letter-spacing: 4px;
+        @include tablet-portrait{
+            margin-bottom:18px;
+        }
+    }
+    p, a, span, li{
+        color:#a1a1a1;
+        font-family:$fontLink;
+        letter-spacing: 0.7px;
+        @include font-size(0.875rem, 1rem, 1rem);
+        @include line-height(1.5rem, 36px, 1.5rem);
+    }
+    a{
+        @include transition(color 150ms cubic-bezier(0.785, 0.135, 0.150, 0.860));
+        &:hover{
+            color:#fff;
+            @include transition(color 150ms cubic-bezier(0.785, 0.135, 0.150, 0.860));
+        }
+        &.copy-text:hover {
+            color: #a1a1a1;
+        }
+    }
+    span{
+        margin-left:4px;
+    }
+    .dark-bar{
+        background:#000;
+        @include clearfix;
+        @include tablet-portrait{
+            padding:18px 32px;
+            z-index:4;
+        }
+        &.fix-footer{
+            position:fixed;
+            bottom:0;
+        }
+    }
+    .footer-contact{
+        p, a{
+            @include line-height(1.5rem, 1.5rem, 1.5rem);
+        }
+    }
+    .footer-legal{
+        width:100%;
+        padding:10px;
+        @include tablet-portrait{
+            width:70%;
+            float:left;
+            padding:0;
+        }
+        ul{
+            li{
+                @include tablet-portrait{
+                    float:left;
+                    padding-top:2px;
+                    padding-right:4px;
+                }
+            }
+        }
+        span{
+            display:none;
+            @include tablet-portrait{
+                display:inline;
+            }
+        }
+        .footer-logo{
+            display:none;
+            @include desktop{
+                display:block;
+                float:left;
+                padding:4px 32px 0 0;
+                opacity:0.7;
+                img{
+                    max-width:215px;
+                    height:auto;
+                }
+            }
+        }
+    }
+    .footer-social{
+        background:#1b1b1b;
+        padding: 15px 10px;
+        width:100%;
+        @include clearfix;
+        @include tablet-portrait{
+            background:none;
+            width:30%;
+            float:right;
+            text-align:right;
+            padding:0;
+        }
+        ul{
+            @include tablet-portrait{
+                float:right;
+            }
+            li{
+                @include tablet-portrait{
+                    float:left;
+                }
+            }
+        }
+    }
+    .social-link{
+        float:left;
+        display:block;
+        &:before{
+            font-size:2rem;
+            color:#fff;
+            @include transition(color 150ms cubic-bezier(0.785, 0.135, 0.150, 0.860));
+            margin-right:1rem;
+            @include tablet-portrait{
+                margin-right:0;
+                margin-left:1rem;
+            }
+            @include desktop{
+                margin-left:2rem;
+            }
+        }
+        &:hover{
+            &:before{
+                color:#b7a389;
+                @include transition(color 150ms cubic-bezier(0.785, 0.135, 0.150, 0.860));
+            }
+        }
+    }
+    &.mobile-only {
+        display: none;
+        position:absolute;
+        bottom:0;
+        width:100%;
+        z-index:2;
+        .nav-open &{
+            z-index:-99;
+        }
+        @include tablet-portrait {
+            display: none;
+        }
+    }
+    &.desktop-only {
+        display: none;
+        @include tablet-portrait {
+            display: block;
+        }
+    }
+}
+.footer-links{
+    padding: 0px 10px 168px;
+    width:100%;
+    background:#1b1b1b;
+    display:none;
+    z-index:2;
+    // Fizes overlap bug
+    @include phone-landscape{
+        z-index:1;
+    }
+    @include tablet-portrait{
+        z-index:2;
+    }
+    .nav-open &{
+        z-index:-99;
+    }
+    /* Fixes Z-index issues of homepage */
+    .homepage &, .watches &, .contact-us-page &, .announcements-page &{
+        @include tablet-portrait{
+            z-index:0;
+        }
+    }
+
+    .col {
+        padding: 15px 0px;
+    }
+
+    @include tablet-portrait{
+        padding:48px 32px;
+        position:fixed;
+        bottom:0;
+        z-index:0;
+    }
+    @include desktop{
+        padding:75px 62px;
+    }
+    h3{
+        color:#fff;
+        margin-bottom:5px;
+        font-family:$fontFooterTitle;
+        @include font-size(20px, 20px, 20px);
+        text-transform:uppercase;
+        letter-spacing: 4px;
+        @include tablet-portrait{
+            margin-bottom:18px;
+        }
+    }
+    p, a, span{
+        color:#a1a1a1;
+        font-family:$fontLink;
+        letter-spacing: 0.7px;
+        @include font-size(14px, 1rem, 1rem);
+        @include line-height(24px, 2.25rem, 1.5rem);
+    }
+    a{
+        @include transition(color 150ms cubic-bezier(0.785, 0.135, 0.150, 0.860));
+        &:hover{
+            color:#fff;
+            @include transition(color 150ms cubic-bezier(0.785, 0.135, 0.150, 0.860));
+        }
+    }
+    span{
+        margin-left:1rem;
+    }
+    li{
+        a{
+            @include tablet-portrait{
+                line-height:1.625rem;
+            }
+            @include small-desktop{
+                // line-height:2.25rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+/* ========================================================
+	SITE ICONS
+======================================================== */
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?a5l3h9');
+    src:url('../fonts/icomoon.eot?a5l3h9#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?a5l3h9') format('truetype'),
+        url('../fonts/icomoon.woff?a5l3h9') format('woff'),
+        url('../fonts/icomoon.svg?a5l3h9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    &:before{
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+.icon-mail-round:before {
+    content: "\e909";
+    color:#1b1b1b;
+}
+.icon-twitter-round:before {
+    content: "\e90a";
+    color:#60aaec;
+}
+.icon-google-round:before {
+    content: "\e90b";
+    color:#c2593e;
+}
+.icon-facebook-round:before {
+    content: "\e90c";
+    color:#455a97;
+}
+.icon-icon-pdf:before {
+    content: "\e90d";
+}
+.icon-arrow-link:before {
+    content: "\e900";
+}
+.icon-arrow-link-left:before {
+    content: "\e910";
+}
+.icon-arrow:before {
+    content: "\e901";
+}
+.icon-arrow-up:before {
+    content: "\e911";
+}
+.icon-close:before {
+    content: "\e902";
+}
+.icon-home:before {
+    content: "\e90e";
+}
+.icon-menu:before {
+    content: "\e904";
+}
+.icon-social-youtube:before {
+    content: "\ea9d";
+}
+.icon-social-facebook:before {
+    content: "\e905";
+}
+.icon-social-linkedin:before {
+    content: "\e906";
+}
+.icon-social-twitter:before {
+    content: "\e907";
+}
+.icon-social-vimeo:before {
+    content: "\e908";
+}
+.icon-social-instagram:before {
+    content: "\e90f";
+}
+.icon-video:before {
+    content: "\e912";
+}
+.icon-audio:before {
+    content: "\ea27";
+}

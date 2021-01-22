@@ -1,0 +1,114 @@
+/* ==========================================================================
+    QUICK LINK STYLES
+   ========================================================================== */
+.quick-links{
+    position: relative;
+    .hide-mob{
+        display:none;
+        @include tablet-portrait{
+            display:block;
+        }
+    }
+    .col{
+        overflow:hidden;
+        position:relative;
+        width:100%;
+        @include tablet-portrait{
+            width:50%;
+        }
+        @include desktop{
+            width:25%;
+        }
+    }
+    img{
+        margin: auto;
+        width:100%;
+        height:auto;
+        @include transform(scale(1.02));
+        @include transition(all 1200ms ease-in-out);
+    }
+    .quick-link-label{
+        width:100%;
+        position:absolute;
+        top:50%;
+        left:50%;
+        padding:12px 20px;
+        @include transform(translate(-50%, -50%));
+        h3{
+            font-size:18px;
+            line-height:22px;
+            color:#fff;
+            font-family:$fontQuote;
+            text-transform:uppercase;
+            letter-spacing:2px;
+            text-align:center;
+            @include transition(all 1200ms ease-in-out);
+            @include tablet-portrait {
+                font-size:24px;
+                line-height:28px;
+            }
+        }
+    }
+    .quick-link-logo {
+        max-width: 200px;
+        margin-bottom: 7px;
+        @include tablet-portrait {
+            max-width: 277px;
+            margin-bottom: 10px;
+        }
+    }
+    .quick-link-stroke {
+        max-width: 220px;
+        margin-bottom: 7px;
+        @include tablet-portrait {
+            max-width: 262px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.watches-title {
+    background-color: #1b1b1b;
+    text-align: center;
+    padding: 50px 0;
+    h2 {
+        color: #FFFFFF;
+        font-family: "josefin_sanssemibold";
+        font-size: 36px;
+        line-height: 34px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 14px;
+        @include tablet-portrait {
+            font-size: 50px;
+            line-height: 48px;
+        }
+    }
+    .watches-title-logo {
+        max-width: 160px;
+        margin-bottom: 10px;
+        @include tablet-portrait {
+            max-width: 210px;
+            margin-bottom: 18px;
+        }
+    }
+    .watches-title-stroke {
+        max-width: 265px;
+    }
+    img {
+        margin: auto;
+    }
+}
+.quick-links-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+    transition: opacity 0.5s ease-in-out;
+    &:hover {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+}

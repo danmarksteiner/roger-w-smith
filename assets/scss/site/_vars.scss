@@ -1,0 +1,143 @@
+/* ==========================================================================
+    VARIABLES
+   ========================================================================== */
+/*
+	You can add new variables underneath the appropriate category.
+	Please comment if not obvious what the variables function is
+
+	Relative(rem) units are used instead of pixels and scaled against 16px default font size of body.
+*/
+
+/* ==========================================================================
+    MEDIA QUERIES
+   ========================================================================== */
+$phonePortrait: 20rem;
+$phoneLandscape: 23rem;
+$tabletPortrait: 48rem;
+$tabletLandscape: 64rem;
+$smallDesktop: $containerWidth;
+$desktop:  96.25rem;
+$largeDesktop:  120rem;
+
+/* ==========================================================================
+    LAYOUT
+   ========================================================================== */
+$smallInnerPadding: 0.5rem;
+$defaultInnerPadding: 1.5rem;
+$largeInnerPadding: 2.5rem;
+
+/* ==========================================================================
+    TYPEFACES
+   ========================================================================== */
+// Font families
+$fontNav: 'josefin_sansbold';
+$fontTitle: 'josefin_sansregular';
+$fontSubTitle: 'josefin_sanssemibold';
+$fontSpotlightTitle: 'josefin_sanssemibold';
+$fontSpotlightContent: 'georgia';
+$fontParagraph: 'georgia';
+$fontLink: 'georgia';
+$fontQuote: 'josefin_sanssemibold';
+$fontFooterTitle: 'josefin_sanssemibold';
+$handwritingHeading: 'holland';
+$handwritingFont: 'labelleauore';
+
+// Font sizes
+// Mobile
+$fontSizeMassive: 2.375rem;
+$fontSizeSpotlight: 2.375rem;
+$fontSizeHeadingSections: 2rem;
+$fontSizeHeading1: 2.25rem;
+$fontSizeHeading2: 1.5rem;
+$fontSizeHeading3: 1.25rem;
+$fontSizeParagraphLead: 1.3125rem;
+$fontSizeParagraphLarge: 1.125rem;
+$fontSizeParagraph: 1rem;
+$fontSizeParagraphSmall: 0.875rem;
+$fontSizeParagraphTiny: 0.75rem;
+$fontSizeForm: 1.125rem;
+$fontSizeIntroText: 1rem;
+
+// Tablet
+$fontSizeMassiveTablet: 5.75rem;
+$fontSizeSpotlightTablet: 3.75rem;
+$fontSizeHeadingSectionsTablet: 2.5rem;
+$fontSizeHeading1Tablet: 3rem;
+$fontSizeHeading2Tablet: 2rem;
+$fontSizeHeading3Tablet: 1.5rem;
+$fontSizeParagraphLeadTablet: 1.5rem;
+$fontSizeParagraphLargeTablet: 1.3125rem;
+$fontSizeParagraphTablet: 1.125rem;
+$fontSizeParagraphSmallTablet: 1rem;
+$fontSizeParagraphTinyTablet: 0.875rem;
+$fontSizeFormTablet: 1.125rem;
+$fontSizeIntroTextTablet: 1.125rem;
+
+// Desktop
+$fontSizeNavDesktop:1.25rem;
+$fontSizeMassiveDesktop: 9rem;
+$fontSizeSpotlightDesktop: 4.5rem;
+$fontSizeHeadingSectionsDesktop: 2.5rem;
+$fontSizeHeading1Desktop: 3rem;
+$fontSizeHeading2Desktop: 2rem;
+$fontSizeHeading3Desktop: 1.5rem;
+$fontSizeParagraphLeadDesktop: 1.5rem;
+$fontSizeParagraphLargeDesktop: 1.25rem;
+$fontSizeParagraphDesktop: 1.125rem;
+$fontSizeParagraphSmallDesktop: 1rem;
+$fontSizeParagraphTinyDesktop: 0.875rem;
+$fontSizeFormDesktop: 1.125rem;
+$fontSizeIntroTextDesktop: 1.375rem;
+
+// Line Heights
+// Mobile
+$fontLineMassive: 2.75rem;
+$fontLineSpotlight: 2.75rem;
+$fontLineHeadingSections: 2.375rem;
+$fontLineHeading1: 2.625rem;
+$fontLineHeading2: 1.75rem;
+$fontLineHeading3: 1.5rem;
+$fontLineParagraphLead: 1.75rem;
+$fontLineParagraphLarge: 1.625rem;
+$fontLineParagraph: 1.375rem;
+$fontLineParagraphSmall: 1.25rem;
+$fontLineParagraphTiny: 1.125rem;
+$fontLineIntroText: 1.25rem;
+
+// Tablet
+$fontLineMassiveTablet: 6.5rem;
+$fontLineSpotlightTablet: 4.875rem;
+$fontLineHeadingSectionsTablet: 2.875rem;
+$fontLineHeading1Tablet: 3.375rem;
+$fontLineHeading2Tablet: 2.25rem;
+$fontLineHeading3Tablet: 1.75rem;
+$fontLineParagraphLeadTablet: 2rem;
+$fontLineParagraphLargeTablet: 1.875rem;
+$fontLineParagraphTablet: 1.625rem;
+$fontLineParagraphSmallTablet: 1.375rem;
+$fontLineParagraphTinyTablet: 1.25rem;
+$fontLineIntroTextTablet: 1.5rem;
+
+// Desktop
+$fontLineMassiveDesktop: 9.5rem;
+$fontLineSpotlightDesktop: 4.875rem;
+$fontLineHeadingSectionsDesktop: 2.875rem;
+$fontLineHeading1Desktop: 3.375rem;
+$fontLineHeading2Desktop: 2.25rem;
+$fontLineHeading3Desktop: 1.75rem;
+$fontLineParagraphLeadDesktop: 2rem;
+$fontLineParagraphLargeDesktop: 1.875rem;
+$fontLineParagraphDesktop: 1.625rem;
+$fontLineParagraphSmallDesktop: 1.375rem;
+$fontLineParagraphTinyDesktop: 1.125rem;
+$fontLineIntroTextDesktop: 1.75rem;
+
+/* ==========================================================================
+    COLOURS
+   ========================================================================== */
+
+/* ==========================================================================
+    ANIMATION
+   ========================================================================== */
+$transitionSpeed: 0.25s;
+

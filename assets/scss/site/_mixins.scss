@@ -1,0 +1,212 @@
+/* ==========================================================================
+    MIXINS
+   ========================================================================== */
+/* Breakpoint Mixins */
+/* Usage - Use instead in place of media queries - Values set in variables partial  */
+@mixin phone-portrait {
+    @media (min-width: $phonePortrait) {
+        @content;
+    }
+}
+@mixin phone-large {
+    @media (min-width: $phoneLandscape) {
+        @content;
+    }
+}
+@mixin phone-landscape {
+    @media (min-width: $phoneLandscape) and (orientation : landscape) {
+        @content;
+    }
+}
+@mixin phone-landscape {
+    @media (min-width: $phoneLandscape) and (orientation : landscape) {
+        @content;
+    }
+}
+@mixin tablet-portrait {
+    @media (min-width: $tabletPortrait) {
+        @content;
+    }
+}
+@mixin tablet-landscape {
+    @media (min-width: $tabletLandscape) and (orientation : landscape) {
+        @content;
+    }
+}
+@mixin small-desktop {
+    @media (min-width: $smallDesktop) {
+        @content;
+    }
+}
+
+/* Ultra specific breakpoints to create hard limits */
+@mixin only-phone-portrait {
+    @media (min-width: $phonePortrait) and (max-width: $phoneLandscape - 1) {
+        @content;
+    }
+}
+@mixin only-phone-landscape {
+    @media (min-width: $phoneLandscape) and (max-width: $tabletPortrait - 1) and (orientation : landscape) {
+        @content;
+    }
+}
+@mixin only-tablet-portrait {
+    @media (min-width: $tabletPortrait) and (max-width: $tabletLandscape - 1) {
+        @content;
+    }
+}
+@mixin only-tablet-landscape {
+    @media (min-width: $tabletLandscape) and (max-width: $smallDesktop - 1) and (orientation : landscape) {
+        @content;
+    }
+}
+@mixin only-small-desktop {
+    @media (min-width: $smallDesktop) and (max-width: $desktop - 1) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+@mixin large-desktop {
+    @media (min-width: $largeDesktop) {
+        @content;
+    }
+}
+
+/* Retina Images */
+/* Usage - Declare under your original image. Use @2x file for $image and smaller original image dimensions $width and $height */
+@mixin image-2x($image, $width, $height) {
+    @media (min--moz-device-pixel-ratio: 1.3),
+        (-o-min-device-pixel-ratio: 2.6/2),
+        (-webkit-min-device-pixel-ratio: 1.3),
+        (min-device-pixel-ratio: 1.3),
+        (min-resolution: 1.3dppx) {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url($image);
+        background-size: $width $height;
+    }
+}
+
+/* Inline Block - Compass Mixin */
+/* Usage - Apply to any inline block element to provide fallbacks for older browsers */
+@mixin inline-block{
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+}
+
+/* Border Radius - Compass Mixin */
+/* Usage - Apply to an element and pass in values - Mixin writes browser prefixs for you */
+@mixin border-radius($value){
+    -webkit-border-radius: $value;
+       -moz-border-radius: $value;
+            border-radius: $value;
+}
+
+/* Box Sizing - Compass Mixin */
+/* Usage - Apply to an element and pass in values - Mixin writes browser prefixs for you */
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+/* Transition - Compass Mixin */
+/* Usage - Apply to an element and pass in values - Mixin writes browser prefixs for you */
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+/* Appearence - Compass Mixin */
+/* Usage - Apply to an element - Usually used for form elements to hide browser default styling e.g rounded corners on text elements in webkit */
+@mixin appearance($appearance) {
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+      -ms-appearance: none !important;
+       -o-appearance: none !important;
+          appearance: none !important;
+}
+
+/* Transform - Compass Mixin */
+/* Usage - Apply to an element and pass in values */
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+       -moz-transform: $transforms;
+        -ms-transform: $transforms;
+         -o-transform: $transforms;
+            transform: $transforms;
+}
+
+/* Box shadow - Compass Mixin */
+/* Usage - Apply to an element and pass in values */
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset:"") {
+    -webkit-box-shadow:$top $left $blur $spread $color #{$inset};
+       -moz-box-shadow:$top $left $blur $spread $color #{$inset};
+            box-shadow:$top $left $blur $spread $color #{$inset};
+}
+
+/* User select none */
+/* Usage - Disables user selection on applied selector */
+@mixin user-select {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+       -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+            user-select: none;          /* Likely future */
+}
+
+/* Clearfix */
+/* Usage - Apply to any element that needs clearing floats - Includes fallbacks for older browsers */
+@mixin clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* Font size */
+/* Usage - Include values for all views in a declaration to avoid having to write media queries every time */
+@mixin font-size($mobile, $tablet, $desktop) {
+    font-size:$mobile;
+    @include tablet-portrait{
+        font-size:$tablet;
+    }
+    @include small-desktop{
+        font-size:$desktop;
+    }
+}
+
+/* Line height */
+/* Usage - Include values for all views in a declaration to avoid having to write media queries every time */
+@mixin line-height($mobile, $tablet, $desktop) {
+    line-height:$mobile;
+    @include tablet-portrait{
+        line-height:$tablet;
+    }
+    @include small-desktop{
+        line-height:$desktop;
+    }
+}
+/* Vertical Align */
+/* Usage - Apply to any element you want to vertically align */
+@mixin vertical-align ($position) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

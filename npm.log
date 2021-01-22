@@ -1,0 +1,6 @@
+
+> node-sass@1.0.3 install C:\Bitnami\wampstack-5.6.22-0\apache2\htdocs\rws\node_modules\node-sass
+> node build.js
+
+
+C:\Bitnami\wampstack-5.6.22-0\apache2\htdocs\rws\node_modules\node-sass>if not defined npm_config_node_gyp (node "C:\Users\DMarksteiner\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin\\..\..\node_modules\node-gyp\bin\node-gyp.js" rebuild )  else (node "" rebuild ) 

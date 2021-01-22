@@ -1,0 +1,21 @@
+/* ==========================================================================
+    COOKIE POLICY STYLES
+   ========================================================================== */
+.cookie-table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: #000;
+    th {
+        text-align: left;
+    }
+    td, th {
+        padding: 10px;
+        border: 1px solid #000;
+        font-family: georgia;
+        font-size: 0.625rem;
+        @include tablet-portrait {
+            font-size: 1rem;
+            ine-height: 1.5625rem;
+        }
+    }
+}

@@ -1,0 +1,202 @@
+/* ==========================================================================
+    QUOTE STYLES
+   ========================================================================== */
+.quote{
+    background:#b7a38a;
+    .row{
+        @include clearfix();
+    }
+    .quote-col {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        @include tablet-portrait {
+            width: 50%;
+            float: left;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .quote-holder {
+        padding: 20px;
+        @include tablet-portrait {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .quotation {
+            display: inline-block;
+            vertical-align: middle;
+            height: 13px;
+            margin-top: 16px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #fff;
+            font-size: 4.375rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            @include small-desktop {
+                font-size: 88px;
+            }
+        }
+        blockquote {
+            text-transform: uppercase;
+            font-style: normal;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            color: #fff;
+            text-align: center;
+            font-family: josefin_sanssemibold;
+            @include small-desktop {
+                font-size: 31px;
+                line-height: 48px;
+            }
+        }
+        span {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            @include small-desktop {
+                font-size: 17px;
+                line-height: 22px;
+            }
+        }
+        .icon-arrow-link {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: 32px;
+            position: relative;
+            margin-top: 2rem;
+            &:before {
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -16px;
+                margin-top: -16px;
+                width: 32px;
+                height: 32px;
+                font-size: 2rem;
+                -webkit-transition: all .6s ease-in-out;
+                -moz-transition: all .6s ease-in-out;
+                -ms-transition: all .6s ease-in-out;
+                -o-transition: all .6s ease-in-out;
+                transition: all .6s ease-in-out;
+                @include small-desktop {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+    }
+    // background:#b7a38a;
+    // .col{
+    //     width:100%;
+    //     text-align:center;
+    //     overflow:hidden;
+    //     &:last-child{
+    //         padding:0 25px;
+    //     }
+	// 	&.quote-col {
+    //         position: relative;
+    //     }
+    //     @include tablet-landscape{
+    //         &:first-child{
+    //             width:50%;
+    //         }
+    //         &:last-child{
+    //             width:50%;
+    //         }
+    //     }
+    //     // @include desktop{
+    //     //     &:first-child{
+    //     //         width:66.66%;
+    //     //     }
+    //     //     &:last-child{
+    //     //         width:33.33%;
+    //     //     }
+    //     // }
+    //     .quote-holder {
+    //         @include tablet-landscape{
+    //             position: absolute;
+    //             top: 50%;
+    //             left: 50%;
+    //             transform: translate(-50%, -50%);
+    //         }
+    //     }
+    // }
+    // img{
+    //     width:100%;
+    //     height:auto;
+    // }
+    // blockquote, span{
+    //     color:#fff;
+    //     text-align:center;
+    //     font-family:$fontQuote;
+    // }
+    // blockquote{
+    //     text-transform:uppercase;
+    //     font-style:normal;
+    //     @include font-size(1.25rem, 1.25rem, 1.9375rem);
+    //     @include line-height(1.75rem, 1.75rem, 3rem);
+    // }
+    // span{
+    //     font-family:$fontLink;
+    //     @include font-size(1rem, 1rem, 1.25rem);
+    //     @include line-height(1.5rem, 1.5rem, 2.125rem);
+    // }
+    // .quote-holder{
+	// 	padding:45px 0px 20px 0px;
+    //     //height: 100%;
+    //     @include phone-portrait {
+    //         padding: 25px;
+    //     }
+    //     .quotation{
+    //         @include inline-block;
+    //         height:13px;
+    //         margin-top:16px;
+    //         margin-bottom:24px;
+    //         border-bottom: 1px solid #fff;
+    //         font-family:$fontLink;
+    //         @include font-size(4.375rem, 6.25rem, 6.25rem);
+    //     }
+    //     .icon-arrow-link{
+    //         @include inline-block;
+    //         width:100%;
+    //         height:32px;
+    //         position:relative;
+    //         margin-top:2rem;
+    //         &:before{
+    //             color:#fff;
+    //             position:absolute;
+    //             top:50%;
+    //             left:50%;
+    //             margin-left:-16px;
+    //             margin-top:-16px;
+    //             width:32px;
+    //             height:32px;
+    //             @include font-size(2rem, 3.125rem, 3.125rem);
+    //             @include transition(all 600ms ease-in-out);
+    //         }
+    //     }
+    // }
+    // a{
+    //     &:hover{
+    //         .icon-arrow-link{
+    //             &:before{
+    //                 @include transform(scale(1.1));
+    //                 opacity:0.4;
+    //                 @include transition(all 600ms ease-in-out);
+    //             }
+    //         }
+    //     }
+    //     img{
+    //         @include transform(scale(1.03));
+    //         @include transition(all 1200ms ease-in-out);
+    //     }
+    // }
+}

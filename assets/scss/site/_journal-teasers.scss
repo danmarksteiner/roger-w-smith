@@ -1,0 +1,84 @@
+/* ==========================================================================
+    JOURNAL TEASER STYLES
+   ========================================================================== */
+.journal-teasers {
+    .col {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        @include tablet-portrait {
+            width: 50%;
+        }
+        @include small-desktop {
+            width: 33.33%;
+        }
+        img {
+            transition: all 0.5s ease-in-out;
+            width: 100%;
+            height: auto;
+        }
+        .teaser-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #000;
+            opacity: 0.65;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .teasers-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 90%;
+            @include small-desktop {
+                min-width: 420px;
+            }
+            span {
+                color: #FFFFFF;
+                font-family: Georgia;
+                font-size: 16px;
+                font-style: italic;
+                line-height: 22px;
+            }
+            h3 {
+                font-size: 18px;
+                line-height: 27px;
+                font-family: "josefin_sanssemibold";
+                color: #FFFFFF;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin: 10px 0 20px;
+                @include small-desktop {
+                    font-size: 22px;
+                    line-height: 31px;
+                    letter-spacing: 4px;
+                }
+            }
+            .icon-arrow-link {
+                font-size: 2rem;
+            }
+        }
+        a{
+            &:hover {
+                .teaser-overlay {
+                    opacity: 0.4;
+                    transition: opacity 0.5s ease-in-out;
+                }
+                // img {
+                //     -webkit-transform: scale(1.01);
+                //     -moz-transform: scale(1.01);
+                //     -ms-transform: scale(1.01);
+                //     -o-transform: scale(1.01);
+                //     transform: scale(1.01);
+                //     transition: all 0.5s ease-in-out;
+                // }
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+/* ==========================================================================
+    AUDIO & VIDEO STYLES
+   ========================================================================== */
+
+.links {
+	background-color: #fff;
+	a {
+		color: #4d4d4d;
+	}
+	.title {
+		cursor: initial;
+	}
+	.container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		max-width: 830px;
+		margin: auto;
+	}
+	.item {
+		padding: 15px 0px;
+		margin: 25px 0px;
+		@include transition(0.2s ease)
+		&:hover {
+			.spacer {
+				width: 100px;
+				background-color: #b7a389;
+			}
+			.thumb {
+				.icon {
+					font-size: 30px;
+				}
+			}
+		}
+		.thumb {
+			width: 75px;
+			height: 75px;
+			float: left;
+			text-align: center;
+			color: #4d4d4d;
+			border: 1px solid #4d4d4d;
+			border-radius: 2px;
+			.icon {
+				font-size: 25px;
+				@include vertical-align(relative)
+				@include transition(0.2s ease)
+			}
+		}
+		.details {
+			margin-left: 100px;
+		}
+		h4 {
+			font-family: josefin_sansbold;
+			text-transform: uppercase;
+			@include transition(0.2s ease)
+		}
+		.spacer {
+			height: 1px;
+			width: 75px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			background-color: #4d4d4d;
+			@include transition(0.2s ease)
+		}
+		p {
+			line-height: 25px;
+			color: #4d4d4d;
+			margin-top: 10px;
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+}

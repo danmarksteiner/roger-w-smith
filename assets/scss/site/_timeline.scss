@@ -1,0 +1,1542 @@
+/* ==========================================================================
+    TIMELINE STYLES
+   ========================================================================== */
+.timeline {
+    overflow-y: hidden;
+    /* Overrides some of Mastersliders inline styles which force the background images up - Only apply where needed */
+    .top-fix {
+        top: 0 !important;
+    }
+    .ms-anim-layers .ms-layer:last-of-type {
+        margin: 0;
+    }
+    .ui-loader {
+        display: none;
+    }
+    /* Dark underlay used to lift the timeline */
+    .main-navigation {
+        background-color: rgba(0,0,0,0.8);
+    }
+    /* Common Type rules */
+    .handwriting {
+        font-family: $handwritingFont;
+    }
+    .handwriting-heading {
+        font-family: $handwritingHeading;
+    }
+    .timeline-watch-heading {
+        color: #FFFFFF;
+        font-family: "josefin_sansbold";
+        font-size: 38px;
+        letter-spacing: 4.72px;
+        line-height: 61px;
+        text-transform: uppercase;
+        font-style: normal;
+    }
+    .bodytext {
+        font-family: Georgia;
+        font-size: 14px;
+        font-style: italic;
+        line-height: 21px;
+        @include tablet-portrait {
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        span {
+            color: #E11D00;
+        }
+    }
+    .title {
+        color: #E11D00;
+        font-family: 'josefin_sansbold';
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-style: normal;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #000;
+        opacity: 0.7;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .spotlight-content {
+        z-index: 2;
+    }
+    .timeline-base-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+    }
+    .mobile-menu-btn a:before {
+        text-shadow: 1px 0 2px #aaaaaa;
+    }
+
+    /* Re-positioning Watchmaker animation from homepage - Moved left to account for missing 'the' */
+    svg{
+        -webkit-transform: translate(-63%, -135%);
+            -ms-transform: translate(-63%, -135%);
+                transform: translate(-63%, -135%);
+        width: 344px !important;
+        height: 26px !important;
+        @media only screen and (min-width: 1280px) {
+            width: 917px !important;
+            height: 70px !important;
+            -webkit-transform: translate(-63%, -113%);
+                -ms-transform: translate(-63%, -113%);
+                    transform: translate(-63%, -113%);
+        }
+        @include small-desktop{
+            -webkit-transform: translateX(-63%);
+                -ms-transform: translateX(-63%);
+                    transform: translateX(-63%);
+
+        }
+    }
+    .spotlight {
+        .logo {
+            -webkit-transform: translateY(-140%);
+                -ms-transform: translateY(-140%);
+                transform: translateY(-140%);
+            img {
+                width: 220px;
+                @media only screen and (min-width: 1280px) {
+                    width: 358px;
+                }
+            }
+        }
+        p {
+            position: initial;
+        }
+    }
+    /* Hides circle nav for timeline slider */
+    .ms-bullets-count {
+        display: none;
+    }
+    .ms-nav-next,
+    .ms-nav-prev {
+        text-shadow: 1px 0px 2px #313131;
+        z-index:99;
+        position:absolute;
+        left:50%;
+        bottom:32px;
+        width:32px;
+        height:32px;
+        margin-left:-16px;
+        cursor:pointer;
+        opacity:0;
+        -webkit-animation: fade-offset2 2s ease-in 4s forwards;
+                animation: fade-offset2 2s ease-in 4s forwards;
+        @include phone-landscape {
+            bottom:35px;
+            left:40px;
+        }
+        @media only screen and (min-width: 1280px) {
+            left: initial;
+            right: 32px;
+            bottom: 32px;
+        }
+        // @include tablet-portrait{
+        //     bottom:32px;
+        //     left:50%;
+        // }
+        &:before{
+            color:#fff;
+            position:absolute;
+            top:0;
+            left:0;
+            font-size:2rem;
+            font-family: 'icomoon' !important;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\e901";
+        }
+        &:hover{
+            &:before{
+                @include small-desktop{
+                    @include transition(transform 600ms cubic-bezier(0.785, 0.135, 0.150, 0.860));
+                    transform: translateY(-10px);
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+    .ms-nav-prev {
+        bottom: initial;
+        top: 20px;
+        display:none;
+        -webkit-animation: fade-offset2 2s ease-in 0s forwards;
+                animation: fade-offset2 2s ease-in 0s forwards;
+        z-index:99;
+        @media only screen and (min-width: 1280px) {
+            top: 65px;
+        }
+        &:before {
+            content: "\e911";
+        }
+    }
+    p {
+        color: #878787;
+        font-family: Georgia;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 14px;
+        text-align: left;
+        @media only screen and (orientation: landscape) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        @media only screen and (min-width: 1280px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    .masterslider-mobile {
+        display: block;
+        @media only screen and (min-width: 1280px) {
+            display: none !important;
+        }
+        @media only screen and (orientation: portrait) {
+            display: block !important;
+        }
+        .ms-slide-text {
+            padding: 0 20px !important;
+            font-style: italic;
+            z-index: 2 !important;
+            @media only screen and (orientation: landscape) {
+                padding: 0 20px 0 80px !important;
+            }
+            @media only screen and (min-device-width: 912px) {
+                padding: 0 40px !important;
+            }
+        }
+        .ms-slide-bg {
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: auto;
+            @media only screen and (orientation: landscape) {
+                height: auto;
+                width: 100%;
+            }
+        }
+        .spotlight .ms-anim-layers .ms-layer:last-of-type {
+            margin: 0;
+        }
+        .ms-slide {
+            background: #000;
+        }
+        p {
+            @media only screen and (min-device-width: 912px) {
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+        /* Slide 1 */
+        .timeline-slide-1 {
+            .ms-layer img {
+                margin :0 !important;
+            }
+        }
+        /* Slide 2 */
+        .timeline-slide-2 {
+            .ms-slide-text {
+                .slide-2-title {
+                    color: #E11D00;
+                    font-family: 'josefin_sansbold';
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                    font-style: normal;
+                }
+                .slide-2-endtext { 
+                    color: #ffffff;
+                }
+            }
+        }
+        /* Slide 3 */
+        .timeline-slide-3 {
+            .ms-slide-text {
+                img {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        /* Slide 4 */
+        .timeline-slide-4 {
+            .ms-slide-text {
+                p {
+                    color: #fff;
+                }
+                .handwriting-heading {
+                    padding: 0 0 20px;
+                    font-size: 44px;
+                    @include tablet-portrait {
+                        font-size: 72px;
+                    }
+                }
+            }
+        }
+        /* Slide 5 */
+        .timeline-slide-5 {
+            background-color: #fff;
+            .handwriting-heading {
+                font-size: 38px;
+                color: #000;
+                @include tablet-portrait{
+                    font-size: 72px;
+                }
+            }
+        }
+        /* Slide 6 */
+        .timeline-slide-6 {
+            background-color: #fff;
+        }
+        /* Slide 7 */
+        .timeline-slide-7 {
+            background-color: #fff;
+        }
+        /* Slide 8 */
+        .timeline-slide-8 {
+            .ms-slide-text-author{
+                color: #9F7A49;
+            }
+        }
+        /* Slide 9 */
+        .timeline-slide-9 {
+            background-color: #fff;
+        }
+        /* Slide 10 */
+        .timeline-slide-10 {
+            p{
+                color: #fff;
+                font-size: 22px;
+                line-height: 30px;
+            }
+        }
+        /* Slide 11 */
+        .timeline-slide-11 {
+            img {
+                min-width: 280px;
+            }
+        }
+        /* Slide 14 */
+        .timeline-slide-14 {
+            .ms-slide-text {
+                p {
+                    color: #fff;
+                }   
+                img{
+                    margin: 0 auto 40px;
+                    width: 100%;
+                    max-width: 320px;
+                }
+            }
+        }
+        /* Slide 15 */
+        .timeline-slide-15 {    
+            .slide-12-endtext {
+                color: #5982FE;
+            }
+        }
+        /* Slide 16 */
+        .timeline-slide-16 {
+            p {
+                color: #fff;
+            }
+        }
+        /* Slide 17 */
+        .timeline-slide-17 {
+            p {
+                color: #fff;
+            }
+        }
+        /* Slide 18 */
+        .timeline-slide-18 {
+            background-color: #fff;
+            img {
+                margin: 0 auto 40px;
+            }
+        }
+        /* Slide 19 */
+        .timeline-slide-19 {
+            p {
+                color: #fff;
+            }
+            img {
+                margin-bottom: 20px;
+            }
+        }
+        /* Slide 20 */
+        .timeline-slide-20 {
+            p {
+                color: #fff;
+            }
+            img {
+                margin-bottom: 20px;
+            }
+        }
+        /* Slide 22 */
+        .timeline-slide-22 {
+            .great-britain-logo {
+                max-width: 110px;
+                margin: 0 auto 20px;
+            }
+            .great-britain-campaign {
+                width: 280px;
+                // @media only screen and (min-device-width: 912px) {
+                //     width: 578px;
+                // }
+            }
+        }
+        /* Slide 23 */
+        .timeline-slide-23 {
+            .bodytext {
+                color: #fff;
+            }
+        }
+        /* Slide 24 */
+        .timeline-slide-24 {
+            .bodytext {
+                color: #fff;
+            }
+        }
+        /* Slide 25 */
+        .timeline-slide-25 {
+            .bodytext {
+                color: #fff;
+            }
+        }
+        /* Slide 26 */
+        .timeline-slide-26 {
+            .bodytext {
+                color: #fff;
+            }
+        }
+        /* Slide 27 */
+        .timeline-slide-27 {
+            .ms-slide-text {
+                top: 60px !important;
+                p {
+                    text-align: center;
+                    color: #878787;
+                }
+                .timeline-watch-heading {
+                    line-height: 46px;
+                    color: #fff;
+                }
+                img {
+                    max-width: 52px;
+                    margin: 0 auto 20px;
+                }
+            }
+        }
+        /* Slide 28 */
+        .timeline-slide-28 {
+            .ms-slide-text {
+                top: 60px !important;
+                p {
+                    text-align: center;
+                    color: #878787;
+                }
+                .timeline-watch-heading {
+                    line-height: 46px;
+                    color: #fff;
+                }
+                img {
+                    max-width: 52px;
+                    margin: 0 auto 20px;
+                }
+            }
+        }
+        /* Slide 29 */
+        .timeline-slide-29 {
+            .ms-slide-text {
+                top: 60px !important;
+                p {
+                    text-align: center;
+                    color: #878787;
+                }
+                .timeline-watch-heading {
+                    line-height: 46px;
+                    color: #fff;
+                }
+                img {
+                    max-width: 52px;
+                    margin: 0 auto 20px;
+                }
+            }
+        }
+        /* Slide 30 */
+        .timeline-slide-30 {
+            .ms-slide-text {
+                p {
+                    text-align: center;
+                    color: #878787;
+                }
+                .timeline-watch-heading {
+                    line-height: 46px;
+                    color: #fff;
+                }
+                img {
+                    max-width: 52px;
+                    margin: 0 auto 20px;
+                }
+            }
+        }
+        /* Slide 31 */
+        .timeline-slide-31 {
+            background-color: #fff;
+        }
+        /* Slide 32 */
+        .timeline-slide-32 {
+            background-color: #fff;
+        }
+        /* Slide 33 */
+        .timeline-slide-33 {
+            background-color: #fff;
+        }
+        /* Slide 34 */
+        .timeline-slide-34 {
+            .ms-slide-text {
+                p {
+                    color: #ffffff;
+                }
+            }
+        }
+        /* Slide 36 */
+        .timeline-slide-36 {
+            .ms-slide-text {
+                p {
+                    color: #ffffff;
+                }
+            }
+        }
+        /* Slide 37 */
+        .timeline-slide-37 {
+            .ms-slide-bg {
+                top: 0 !important;
+                transform: translate(-50%, 0) !important;
+            }
+            .ms-slide-text {
+                p {
+                    color: #ffffff;
+                }
+            }
+        }
+        /* Slide 38 */
+        .timeline-slide-38 {
+            .ms-slide-text {
+                p {
+                    color: #ffffff;
+                }
+            }
+        }
+        /* Slide 39 */
+        .timeline-slide-39 {
+            background-color: #fff;
+            .obe-medal {
+                max-width: 120px;
+                margin: auto;
+            }
+        }
+        /* Slide 40 */
+        .timeline-slide-40 {
+            .ms-slide-text {
+                p {
+                    color: #ffffff;
+                }
+            }
+        }
+        /* Slide 41 */
+        .timeline-slide-41 {
+            .ms-slide-text {
+                p {
+                    color: #ffffff;
+                }
+            }
+        }
+        /* Slide 42 */
+        .timeline-slide-42 {
+            .ms-slide-bg {
+                top: 0% !important;
+                transform: translate(-50%, 0);
+            }
+            .ms-slide-text {
+                img {
+                    width: 280px;
+                    @include tablet-portrait {
+                        width: 520px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    
+    .masterslider-desktop {
+        display: none !important;
+        @media only screen and (min-width: 1280px) {
+            display: block !important;
+        }
+        @media only screen and (orientation: portrait) {
+            display: none !important;
+        }
+        .ms-slide {
+            background-color: #000;
+        }
+        .ms-slide-bg {
+            @media only screen and (orientation: portrait) {
+                // display: none !important;
+                width: 100% !important;
+                height: auto !important;
+                margin-top: 0 !important;
+            }
+        }
+        .stroke-layer {
+            margin-top: 30px !important;
+        }
+        /* Slide 2 */
+        .timeline-slide-2 {
+            background: #000;
+            .ms-slide-bg {
+                margin-left: 0 !important;
+            }
+            .slide-2-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #000;
+                opacity: 0.6;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                /* Removes building image from landscape layout */
+                @media only screen 
+                and (min-device-width: 320px) 
+                and (-webkit-min-device-pixel-ratio: 2)
+                and (orientation: landscape) {
+                    opacity: 1;
+                }
+                @media only screen and (min-width: 1280px) {
+                    display: none;
+                }
+            }
+            .ms-slide-text {
+                @media only screen and (min-width: 1280px) {
+                    max-width: 300px;
+                }
+            }
+            .ms-slide-image {
+                display: none;
+                @media only screen and (min-width: 1280px) {
+                    display: block;
+                    width: 524px;
+                }
+            }
+            .slide-2-title {
+                color: #E11D00;
+                font-family: 'josefin_sansbold';
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            .slide-2-endtext { 
+                color: #ffffff;
+            }
+            p {
+                font-style: italic;
+            }
+        }
+
+        /* Slide 3 */
+        .timeline-slide-3 {
+            position: relative;
+            .slide-2-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #000;
+                opacity: 0.6;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                @include tablet-portrait {
+                    display: none;
+                }
+            }
+            // .ms-slide-bg {
+            //     position: absolute;
+            //     top: 0;
+            //     left: 50%;
+            //     transform: translate(-41%, 0);
+            //     z-index: 0;
+            //     @media only screen 
+            //     and (min-device-width: 320px) 
+            //     and (-webkit-min-device-pixel-ratio: 2)
+            //     and (orientation: landscape) {
+            //         transform: translate(-50%, 0);
+            //     }
+            //     @include tablet-portrait {
+            //         transform: translate(-50%, 0);
+            //     }
+            // }
+            .ms-slide-text {
+                padding: 0 20px !important;
+                img {
+                    margin-bottom: 10px;
+                    max-width: 263px;
+                }
+                @media only screen 
+                and (min-device-width: 320px) 
+                and (-webkit-min-device-pixel-ratio: 2)
+                and (orientation: landscape) {
+                    padding: 0 80px !important;
+                    bottom: 10px !important;
+                }
+                @include tablet-portrait {
+                    bottom: initial !important;
+                    // transform: translate(0, -50%);
+                    max-width: 300px;
+                }
+            }
+            p {
+                font-style: italic;
+            }
+        }
+
+        /* Slide 4 */
+        .timeline-slide-4 {
+            background-color: #fff;
+            .ms-slide-bg {
+                top: 0 !important;
+                margin-top: 100px !important;
+            }
+            p {
+                font-style: italic;
+                max-width: 300px;
+                margin-bottom: 32px;
+            }
+            .handwriting-heading {
+                font-size: 60px;
+                font-style: normal;
+                color: #091F5C;
+                max-width: 417px;
+                padding-right: 40px;
+            }
+            .ms-slide-text {
+                margin: 0 !important;
+            }
+            .ms-slide-image {
+                top: 0 !important;
+                margin-top: 100px !important;
+            }
+        }
+        
+        /* Slide 5 */
+        .timeline-slide-5 {
+            position: relative;
+            background-color: #fff;
+            .ms-slide-text {
+                margin: 0 !important; 
+                padding: 0 !important;
+                .handwriting-heading {
+                    font-size: 100px;
+                    line-height: 68px;
+                    letter-spacing: 2.41px;
+                    color: #000;
+                }
+            }
+        }
+
+        /* Slide 6 */
+        .timeline-slide-6 {
+            position: relative;
+            background-color: #fff;
+            .ms-slide-text {
+                width: 800px;
+            }
+            .title {
+                color: #E11D00;
+                font-family: 'josefin_sansbold';
+                font-size: 15px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            .handwriting {
+                color: #303030;
+                font-size: 35px;
+                letter-spacing: -0.5px;
+                line-height: 45px;
+            }
+            .bodytext {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        /* Slide 7 */
+        .timeline-slide-7 {
+            position: relative;
+            .handwriting {
+                color: #fff;
+                font-size: 30px;
+                letter-spacing: 0.32px;
+                line-height: 32px;
+            }
+            .ms-slide-text-author {
+                color: #9F7A49;
+            }
+            .ms-slide-text {
+                max-width: 355px;
+            }
+        }
+
+        /* Slide 8 */
+        .timeline-slide-8 {
+            position: relative;
+            background-color: #fff;
+            .ms-slide-text {
+                width: 800px;
+            }
+            .title {
+                color: #E11D00;
+                font-family: 'josefin_sansbold';
+                font-size: 15px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            .handwriting {
+                color: #303030;
+                font-size: 35px;
+                letter-spacing: -0.5px;
+                line-height: 45px;
+                margin-bottom: 37px;
+            }
+            .bodytext {
+                margin-bottom: 65px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        /* Slide 9 */
+        .timeline-slide-9 {
+            .ms-slide-text {
+                width: 800px;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .handwriting {
+                color: #fff;
+                font-size: 35px;
+                letter-spacing: -0.5px;
+                line-height: 45px;
+            }
+        }
+        
+        /* Slide 10 */
+        .timeline-slide-10 {
+            .underline {
+                position: absolute;
+                left: 50%;
+                bottom: -25px;
+                transform: translate(-50%, 0);
+                img {
+                    width: 442px;
+                }
+            }
+        }
+
+        /* Slide 11 */
+        .timeline-slide-11 {
+            .ms-slide-text {
+                @include tablet-portrait {
+                    max-width: 331px;
+                }
+            }
+            .ms-slide-image {
+                display: none;
+                @include tablet-portrait {
+                    display: block;
+                    width: 524px;
+                }
+            }
+            .slide-11-title {
+                color: #E11D00;
+                font-family: 'josefin_sansbold';
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            p {
+                font-style: italic;
+            }
+        }
+
+        /* Slide 12 */
+        .timeline-slide-12 {
+            position: relative;
+            .ms-slide-text {
+                text-align: center;
+                margin: 0 !important;
+                padding: 0 !important;
+                img {
+                    margin: 0 auto 20px;
+                    width: 432px;
+                }
+                p {
+                    color: #fff;
+                    text-align: center;
+                    width: 300px;
+                    font-size: 16px;
+                    font-style: italic;
+                    line-height: 22px;
+                    margin: 0 auto 20px;
+                }
+            }
+            .slide-12-endtext {
+                color: #5982FE !important;
+            }
+        }
+
+        /* Slide 13 */
+        .timeline-slide-13 {
+            position: relative;
+            .ms-slide-text {
+                max-width: 300px;
+                p {
+                    font-style: italic;
+                }
+                .timeline-watch-heading {
+                    font-style: normal;
+                }
+            }
+        }
+
+        /* Slide 14 */
+        .timeline-slide-14 {
+            position: relative;
+            opacity: 1;
+            background: #fff;
+            .ms-slide-text {
+                margin: 0 !important;
+                padding: 0 !important;
+                img {
+                    max-width: 820px;
+                    margin: 0 auto 40px;
+                }
+                p {
+                    max-width: 300px;
+                    text-align: center;
+                    margin: auto;
+                    font-style: italic;
+                }
+            }
+        }
+
+        /* Slide 15 */
+        .timeline-slide-15 {
+            .ms-layer-watch {
+                img {
+                    min-height: 100vh;
+                    width: auto;
+                }
+            }
+            .ms-slide-text {
+                max-width: 300px;
+                img {
+                    max-width: 275px;
+                }
+                p {
+                    font-size: 16px;
+                    font-style: italic;
+                    line-height: 22px;
+                    color: #878787;
+                }
+            }
+        }
+
+        /* Slide 16 */
+        .timeline-slide-16 {
+            position: relative;
+            background-color: #fff;
+            .ms-layer-watch {
+                img {
+                    min-height: 100vh;
+                    width: auto;
+                }
+            }
+            .ms-slide-text {
+                max-width: 300px;
+                img {
+                    max-width: 275px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 16px;
+                    font-style: italic;
+                    line-height: 22px;
+                    color: #878787;
+                }
+            }
+        }
+
+        /* Slide 17 */
+        .timeline-slide-17 {
+            .ms-slide-bg {
+                margin-left: 0!important; 
+            }
+            .slide-17-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #000;
+                opacity: 0.6;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                @media only screen 
+                and (min-device-width: 320px) 
+                and (-webkit-min-device-pixel-ratio: 2)
+                and (orientation: landscape) {
+                    opacity: 1;
+                }
+            }
+            .ms-slide-text {
+                padding: 0 20px !important;
+                @include tablet-portrait {
+                    max-width: 300px;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+                p {
+                    font-style: italic;
+                }
+                .handwriting {
+                    color: #fff;
+                    font-size: 25px;
+                    line-height: 40px;
+                    font-style: normal;
+                }
+            }
+            .slide-17-title {
+                color: #E11D00;
+                font-family: 'josefin_sansbold';
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            .slide-17-endtext { 
+                color: #ffffff;
+            }
+        }
+
+        /* Slide 18 */
+        .timeline-slide-18 {
+            .ms-layer {
+                padding: 0 20px!important;
+            }
+            .timeline-slide-18-image-1 {
+                max-width: 110px;
+                margin: 0 auto 40px auto;
+            }
+        }
+
+        /* Slide 19 */
+        .timeline-slide-19 {
+            .ms-slide-text {
+                padding: 0 20px !important;
+                /* Landscape */
+                @media only screen 
+                and (min-device-width: 320px) 
+                and (-webkit-min-device-pixel-ratio: 2)
+                and (orientation: landscape) {
+                    padding: 0 80px !important;
+                }
+                @include tablet-portrait {
+                    max-width: 300px;
+                    margin :0;
+                }
+            }
+            .ms-slide-image {
+                display: none;
+                @include tablet-portrait {
+                    display: block;
+                    width: 524px;
+                }
+            }
+            .slide-19-title {
+                color: #E11D00;
+                font-family: 'josefin_sansbold';
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            .slide-19-endtext { 
+                color: #ffffff;
+            }
+            p {
+                font-style: italic;
+            }
+        }
+
+        /* Slide 20 */
+        .timeline-slide-20 {
+            .ms-slide-text {
+                margin: 0 !important;
+                padding: 0 !important;
+                .handwriting {
+                    color: #fff;
+                    font-size: 35px;
+                    line-height: 45px;         
+                }
+                @include tablet-portrait {
+                    max-width: 860px;
+                }
+            }
+            .slide-20-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #000;
+                opacity: 0.6;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+
+        /* Slide 21 */
+        .timeline-slide-21 {
+            .ms-slide-text {
+                margin: 0 !important;
+                padding: 0 !important;
+                .handwriting {
+                    color: #fff;
+                    font-size: 35px;
+                    line-height: 45px;         
+                }
+                @include tablet-portrait {
+                    max-width: 800px;
+                }
+            }
+        }
+
+        /* Slide 22 */
+        .timeline-slide-22 {
+            .ms-slide-text {
+                p {
+                    text-align: center;
+                    max-width: 300px;
+                    margin: auto;
+                    font-style: italic;
+                }
+                .timeline-watch-heading {
+                    max-width: 445px;
+                    font-style: normal;
+                    margin-bottom: 20px;
+                    font-size: 21px;
+                    line-height: 23px;
+                    letter-spacing: 3.82px;
+                }
+                img {
+                    width: 52px;
+                    margin: 0 auto 10px auto;
+                }
+            }
+        }
+
+        /* Slide 23 */
+        .timeline-slide-23 {
+            .ms-slide-text {
+                p {
+                    text-align: center;
+                    max-width: 300px;
+                    margin: auto;
+                    font-style: italic;
+                }
+                .timeline-watch-heading {
+                    max-width: 445px;
+                    font-style: normal;
+                    margin-bottom: 20px;
+                    font-size: 21px;
+                    line-height: 23px;
+                    letter-spacing: 3.82px;
+                }
+                img {
+                    width: 52px;
+                    margin: 0 auto 10px auto;
+                }
+            }
+        }
+
+        /* Slide 24 */
+        .timeline-slide-24 {
+            .ms-slide-text {
+                p {
+                    text-align: center;
+                    max-width: 300px;
+                    margin: auto;
+                    font-style: italic;
+                }
+                .timeline-watch-heading {
+                    max-width: 445px;
+                    font-style: normal;
+                    margin-bottom: 20px;
+                    font-size: 21px;
+                    line-height: 23px;
+                    letter-spacing: 3.82px;
+                }
+                img {
+                    width: 52px;
+                    margin: 0 auto 10px auto;
+                }
+            }
+        }
+
+        /* Slide 25 */
+        .timeline-slide-25 {
+            .ms-slide-text {
+                p {
+                    text-align: center;
+                    max-width: 300px;
+                    margin: auto;
+                    font-style: italic;
+                }
+                .timeline-watch-heading {
+                    max-width: 445px;
+                    font-style: normal;
+                    margin-bottom: 20px;
+                    font-size: 21px;
+                    line-height: 23px;
+                    letter-spacing: 3.82px;
+                }
+                img {
+                    width: 52px;
+                    margin: 0 auto 10px auto;
+                }
+            }
+        }   
+
+        /* Slide 26 */
+        .timeline-slide-26 {
+            background-color: #fff;
+            .ms-slide-text {
+                max-width: 800px;
+                .handwriting {
+                    font-size: 35px;
+                    line-height: 45px;
+                    letter-spacing: -0.5px;
+                    color: #303030;
+                } 
+            }
+        }   
+
+        /* Slide 27 */
+        .timeline-slide-27 {
+            background-color: #fff;
+            .ms-slide-text {
+                max-width: 800px;
+                margin: 0 !important;
+                padding: 0 !important;
+                .handwriting {
+                    font-size: 35px;
+                    line-height: 45px;
+                    letter-spacing: -0.5px;
+                    color: #303030;
+                } 
+            }
+        }
+
+        /* Slide 28 */
+        .timeline-slide-28 {
+            background-color: #fff;
+            .ms-slide-text {
+                max-width: 800px;
+                margin: 0 !important;
+                padding: 0 !important;
+                .handwriting {
+                    font-size: 35px;
+                    line-height: 45px;
+                    letter-spacing: -0.5px;
+                    color: #303030;
+                } 
+            }
+        } 
+
+        /* Slide 29 */
+        .timeline-slide-29 {
+            background-color: #fff;
+            .ms-layer-watch {
+                margin: 0 !important;
+                display: table;
+                .timeline-slide-29-watch {
+                    display: table-cell;
+                    padding: 0 20px;
+                    &:last-child {
+                        p {
+                            margin-bottom: 18px;
+                        }
+                    }
+                }
+                p {
+                    text-align: center;
+                    margin: auto;
+                    text-transform: uppercase;
+                    padding-right: 8px;
+                    font-family: 'josefin_sansbold';
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                    margin-bottom: 40px;
+                }
+                &:nth-child(5) {
+                    p {
+                        margin-bottom: 23px;
+                    }
+                }
+                img {
+                    max-width: 207px;
+                }
+            }
+            .ms-layer-text {
+                max-width: 800px;
+                p {
+                    font-size: 17px;
+                    line-height: 24px;
+                    font-style: italic;
+                }
+            }
+        } 
+
+        /* Slide 30 */
+        .timeline-slide-30 {
+            .ms-layer {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        } 
+
+        /* Slide 31 */
+        .timeline-slide-31 {
+            .ms-slide-text {
+                @include tablet-portrait {
+                    max-width: 300px;
+                    margin: 0 !important;
+                    padding: 0;
+                }
+            }
+            .ms-slide-image {
+                display: none;
+                @include tablet-portrait {
+                    display: block;
+                    width: 524px;
+                }
+            }
+            .slide-31-title {
+                color: #E11D00;
+                font-family: 'josefin_sansbold';
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            p {
+                font-style: italic;
+            }
+        }
+
+        /* Slide 32 */
+        .timeline-slide-32 {
+            .ms-slide-text {
+                max-width: 800px;
+                margin: 0 !important;
+                padding: 0 !important;
+                .handwriting {
+                    font-size: 35px;
+                    line-height: 45px;
+                    letter-spacing: -0.5px;
+                    color: #fff;
+                } 
+            }
+        }      
+
+        /* Slide 33 */
+        .timeline-slide-33 {
+            .ms-slide-text {
+                max-width: 800px;
+                margin: 0 !important;
+                padding: 0 !important;
+                .handwriting {
+                    font-size: 35px;
+                    line-height: 45px;
+                    letter-spacing: -0.5px;
+                    color: #fff;
+                    margin-bottom: 40px;
+                } 
+            }
+        }      
+
+        /* Slide 34 */
+        .timeline-slide-34 {
+            background-color: #fff;
+            .obe-medal {
+                width: 136px;
+                margin: 0 auto 20px auto;
+            }
+            .ms-slide-text {
+                max-width: 810px;
+                .handwriting {
+                    font-size: 35px;
+                    line-height: 45px;
+                    letter-spacing: -0.5px;
+                    color: #303030;
+                    margin-bottom: 40px;
+                } 
+            }
+        }      
+
+        /* Slide 35 */
+        .timeline-slide-35 {
+            .ms-slide-image {
+                width: 450px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .ms-slide-text {
+                @include tablet-portrait {
+                    max-width: 300px;
+                    margin: 0 !important;
+                    padding: 0;
+                }
+            }
+            .slide-35-title {
+                color: #E11D00;
+                font-family: 'josefin_sansbold';
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            p {
+                font-style: italic;
+            }
+        }
+
+        /* Slide 36 */
+        .timeline-slide-36 {
+            .ms-slide-bg {
+                margin: 0 !important;
+                padding: 0 !important;
+                height: 100% !important;
+                width: auto !important;
+                left: 50% !important;
+                top: 50% !important;
+                transform:translate(-50%, -50%) !important;
+            }
+            .ms-layer-text {
+                margin: 0 !important;
+                padding: 0 !important;
+                img {
+                    width: 800px;
+                }
+            }
+        }
+        /* Slide 37 */
+        .timeline-slide-37 {
+            background: #000;
+            .ms-slide-bg {
+                margin-left: 0 !important;
+            }
+            .slide-2-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #000;
+                opacity: 0.6;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                /* Removes building image from landscape layout */
+                @media only screen 
+                and (min-device-width: 320px) 
+                and (-webkit-min-device-pixel-ratio: 2)
+                and (orientation: landscape) {
+                    opacity: 1;
+                }
+                @media only screen and (min-width: 1280px) {
+                    display: none;
+                }
+            }
+            .ms-slide-text {
+                @media only screen and (min-width: 1280px) {
+                    max-width: 300px;
+                }
+            }
+            .ms-slide-image {
+                display: none;
+                @media only screen and (min-width: 1280px) {
+                    display: block;
+                    width: 524px;
+                }
+            }
+            .slide-2-title {
+                color: #E11D00;
+                font-family: 'josefin_sansbold';
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            .slide-2-endtext { 
+                color: #ffffff;
+            }
+            p {
+                font-style: italic;
+            }
+        }
+        /* Slide 38 */
+        .timeline-slide-38 {
+            .ms-slide-text {
+                margin: 0 !important;
+                padding: 0 !important;
+                .handwriting {
+                    color: #fff;
+                    font-size: 35px;
+                    line-height: 45px;         
+                }
+                @include tablet-portrait {
+                    max-width: 860px;
+                }
+            }
+            .slide-38-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #000;
+                opacity: 0.6;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+
+    }
+}

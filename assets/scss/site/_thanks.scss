@@ -1,0 +1,47 @@
+/* ==========================================================================
+    CONTACT THANKS STYLES
+   ========================================================================== */
+
+section.thanks {
+	text-align: center;
+	min-height: 54vh;
+
+	p {
+		margin-bottom: 10px;
+
+		&:first-of-type {
+			font-family: josefin_sanssemibold;
+			color: #c19779;
+			font-size: 2rem;
+			line-height: 2rem;
+			margin-top: 75px;
+			text-transform: uppercase;
+			margin-bottom: 50px;
+		}
+	}
+
+	.btn {
+		background: #c19779;
+		color: #fff;
+		padding: 10px 30px;
+		margin-top: 150px;
+		margin-bottom: 50px;
+		display: inline-block;
+		@include transition(.2s linear);
+
+		&:hover {
+			background: lighten(#c19779, 15%);
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.icon-home {
+			margin-right: 5px;
+			font-size: 1.4rem;
+			margin-top: -3px;
+		}
+	}
+}

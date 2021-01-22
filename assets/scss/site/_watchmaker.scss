@@ -1,0 +1,67 @@
+/* ==========================================================================
+    WATCHMAKER STYLES
+   ========================================================================== */
+.ethos-desktop{
+    background:#382c24;
+    text-align: center;
+    img{
+        width:100%;
+        height:auto;
+    }
+    h2{
+        color:#fff;
+        text-transform:uppercase;
+        letter-spacing: 4px;
+        font-family:$fontTitle;
+        @include font-size(1.25rem, 1.25rem, 1.875rem);
+        @include line-height(1.5rem, 1.5rem, 2.5625rem);
+    }
+    span{
+        color:#fff;
+        margin-bottom:25px;
+        display:block;
+    }
+    p{
+        color:#fff;
+        margin-bottom:16px;
+        font-family:georgia;
+        @include font-size(1rem, 1rem, 1.25rem);
+        @include line-height(1.25rem, 1.25rem, 1.75rem);
+        @include small-desktop {
+            font-size: 0.97rem;
+        }
+        @include desktop{
+            margin-bottom:25px;
+            font-size: 1.25rem;
+        }
+        &.starred{
+            @include font-size(0.75rem, 0.75rem, 0.8rem);
+            @include line-height(1.25rem, 1.25rem, 1.25rem);
+            font-style:italic;
+            text-align:left;
+            @include small-desktop{
+                margin-top:40px;
+                position: initial;
+                margin-bottom: 0;
+            }
+            @include desktop{
+                position:absolute;
+                bottom:1rem;
+                left:2rem;
+            }
+        }
+    }
+    .ethos-content-holder{
+        padding:16px;
+        @include small-desktop{
+            padding:32px;
+        }
+        @include desktop{
+            max-width: 558px;
+            margin: auto;
+            .ie &{
+                margin-top:0;
+            }
+        }
+    }
+}

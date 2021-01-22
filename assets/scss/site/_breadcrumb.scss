@@ -1,0 +1,46 @@
+/* ==========================================================================
+    BREADCRUMB STYLES
+   ========================================================================== */
+
+/*
+	Template applied to - page.tpl.php
+	Description - Applies styling page breadcrumbs
+*/
+#block-jellyfish-largemenu-jellyfish-breadcrumb{
+	color:#fff;
+	padding-top:2rem;
+	opacity:0.5;
+	li{
+		@include inline-block;
+		a{
+			font-family:$fontParagraph;
+			font-size:0.875rem;
+			color:#f5f5f5;
+		}
+	}
+}
+.content-hero-breadcrumb{
+	display:none;
+	opacity:0.5;
+	padding-bottom:1.5rem;
+	@include tablet-portrait{
+		display:block;
+	}
+	@include small-desktop{
+		padding-bottom: 2rem;
+ //    	padding-top: 1rem;
+	}
+	ol{
+		color:#fff;
+		li{
+			display:inline;
+			a{
+				span{
+					color:#f5f5f5;
+					font-size:0.875rem;
+					font-family:$fontParagraph;
+				}
+			}
+		}
+	}
+}
