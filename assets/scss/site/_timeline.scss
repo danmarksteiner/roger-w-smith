@@ -204,6 +204,9 @@
             font-size: 16px;
             line-height: 22px;
         }
+        &.mob-text {
+            color: #fff;
+        }
     }
     .masterslider-mobile {
         display: block;
@@ -1537,6 +1540,97 @@
                 z-index: 1;
             }
         }
-
+        .timeline-slide-45 {
+            .slide-45-title {
+                font-family: 'josefin_sansbold';
+                font-size: 20px;
+                letter-spacing: 2px;
+                font-style: normal;
+                text-align: center;
+            }
+            .ms-slide-text {
+                margin: 0!important;
+                padding: 0!important;
+                top: auto!important;
+                bottom: 100px!important;
+                @include tablet-portrait {
+                    max-width: 860px;
+                }
+                .handwriting {
+                    color: #fff;
+                    font-size: 30px;
+                    line-height: 40px;
+                    text-align: center;
+                }
+            }
+        }
+        .timeline-slide-46 {
+            background: #000;
+            .slide-46-title {
+                color: #014590;
+                font-family: 'josefin_sansbold';
+                font-size: 24px;
+                line-height: 30px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            .ms-slide-text {
+                max-width: 300px;
+            }
+            p {
+                font-size: italic;
+            }
+        }
+        .timeline-slide-47 {
+            background: #000;
+            .ms-slide-bg {
+                margin-left: 0 !important;
+            }
+            .slide-2-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #000;
+                opacity: 0.6;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                /* Removes building image from landscape layout */
+                @media only screen 
+                and (min-device-width: 320px) 
+                and (-webkit-min-device-pixel-ratio: 2)
+                and (orientation: landscape) {
+                    opacity: 1;
+                }
+                @media only screen and (min-width: 1280px) {
+                    display: none;
+                }
+            }
+            .ms-slide-text {
+                @media only screen and (min-width: 1280px) {
+                    max-width: 300px;
+                }
+            }
+            .ms-slide-image {
+                display: none;
+                @media only screen and (min-width: 1280px) {
+                    display: block;
+                    width: 524px;
+                }
+            }
+            .slide-2-title {
+                color: #E11D00;
+                font-family: 'josefin_sansbold';
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-style: normal;
+            }
+            .slide-2-endtext { 
+                color: #ffffff;
+            }
+            p {
+                font-style: italic;
+            }
+        }
     }
 }
