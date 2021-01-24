@@ -89,6 +89,23 @@ footer{
                     height:auto;
                 }
             }
+            &.watch-makers {
+                display: block;
+                text-align: right;
+                padding-top: 0;
+                @include tablet-portrait{
+                    display: inline-block;
+                    text-align: left;
+                }
+                @include desktop{
+                    display: block;
+                    text-align: initial;
+                }
+                img{
+                    display: inline;
+                    max-width: 90px;
+                }
+            }
         }
     }
     .footer-social{
@@ -154,6 +171,17 @@ footer{
         display: none;
         @include tablet-portrait {
             display: block;
+        }
+        @include desktop {
+            .footer-logo {
+                padding-top: 10px;
+            }
+            .footer-legal ul li {
+                padding-top: 10px;
+            }
+            .footer-social {
+                padding-top: 10px;
+            }
         }
     }
 }
