@@ -238,7 +238,7 @@
 									</address>
 
 									<div>
-										<p>+852 6183 9988</p>
+										<p>+852 6433 0708</p>
 										<a href="mailto:info@artofhorology.hk">info(at)artofhorology.hk</a>
 									</div>
 								</div>

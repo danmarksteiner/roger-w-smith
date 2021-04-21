@@ -456,7 +456,7 @@
                 text-align:right;
                 padding-top:8px;
                 padding-right:10px;
-                margin-top:40px;
+                margin-top:0;
             }
             @include tablet-portrait{
                 text-align:center;
@@ -636,4 +636,35 @@ svg{
 /* Removes fills from SVG elements such as the inside of O's or R's */
 .stroke{
 	fill:none;
+}
+.product-spotlight-sold {
+    .spotlight-content {
+        .spotlight-sold {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: rgba(0,0,0,0.4);
+            @include tablet-portrait {
+                margin-top: 20px;
+                font-size: 24px;
+            }
+            @include small-desktop{
+                display: inline-block;
+                padding: 5px 80px;
+            }
+        }
+        @include small-desktop{
+            img {
+                width: 330px;
+            }
+        }
+    }
+    .scroll-link {
+        bottom: 50px;
+        @include phone-large{
+            bottom: 75px;
+        }
+        @include small-desktop{
+            bottom: 15px;
+        }
+    }
 }
