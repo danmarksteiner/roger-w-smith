@@ -506,7 +506,7 @@ $(document).ready(function() {
                 parallaxMode:"mouse",
                 hideLayers:false,
                 instantStartLayers: true,
-                start: 43,
+                // start: 43,
             });
             slider.control('bullets' , {autohide:false  , dir:"v", align:"bottom"});
             // adds Arrows navigation control to the slider.
@@ -568,7 +568,7 @@ $(document).ready(function() {
                 parallaxMode:"mouse",
                 hideLayers:false,
                 instantStartLayers: true,
-                start: 43,
+                // start: 43,
             });
             slider.control('bullets' , {autohide:false  , dir:"v", align:"bottom"});
             // adds Arrows navigation control to the slider.
