@@ -188,6 +188,18 @@ p {
     }
 }
 
+.post-content {
+    p {
+        &.question-alt {
+            margin-top: 20px;
+            margin-bottom: 5px !important;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
+        }
+    }
+}
+
 .announcements-page {
 
     .spotlight-post {
