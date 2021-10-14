@@ -765,7 +765,7 @@ $(document).ready(function() {
                 image: {
                     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
                     titleSrc: function(item) {
-                        return item.el.attr('title');
+                        return item.el.attr('hoverTitle');
                     }
                 }
             });

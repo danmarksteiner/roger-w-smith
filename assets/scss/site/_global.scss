@@ -233,6 +233,20 @@ textarea {
         }
     }
 }
+@include large-desktop{
+    @for $i from 1 through $column {
+        .col-xxxl-#{$i} {
+            $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+            width: $colWidth;
+            margin-left: 1% * $columnGutter;
+        }
+        .col-xxxl-#{$i}-no-margin {
+            $colWidth: (100% / $column) * $i; 
+            width: $colWidth;
+            margin-left:0;
+        }
+    }
+}
 /* Global Page Styles */
 .page-scroller{
     a{
