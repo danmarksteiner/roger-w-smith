@@ -112,6 +112,7 @@
 			<!-- Contact Us Start -->
 			<section class="contact-us">
 				<div class="container-fluid">
+
 					<div class="row">
 						<div class="col col-xxl-1"></div>
 
@@ -119,6 +120,16 @@
 
 							<!-- Form Start -->
 							<div class="contact-form">
+								<div class="message">
+									<h3>I&#x2019;m putting a &#x2018;pause&#x2019; on all new orders until further notice&#x2026;</h3>
+									<p>Ever since establishing Roger W. Smith in 2001, I’ve been committed to being uncompromising in my ethos - to make just a few watches each year and to explore new frontiers in horology.</p>
+									<p>After unprecedented interest in my watches in recent years, I have decided to press the &#x2018;pause button&#x2019; on accepting any new orders, until further notice.</p>
+									<p>For now, I will focus entirely on orders from my existing clients. I’ve also made this decision to give me enough breathing space to continue exploring new ideas in my horological work.</p>
+									<p>I know this will be disappointing for new clients hoping to order a Roger W. Smith watch, but I hope everyone will understand that closing my order book for the time being is also vital to maintain the integrity of my approach to watchmaking.</p>
+									<div class="message-signature">
+										<img src="../images/layout/rws-signature.jpg" alt="Roger W Smith Signature" />
+									</div>
+								</div>
 								<form id="contactForm" action="mailer.php" method="post">
 									
 									<!-- Title -->

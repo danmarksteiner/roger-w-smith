@@ -5,6 +5,41 @@
     background:#fff;
 }
 .contact-form{
+    .message {
+        padding: 0 14px;
+        margin-top: 25px;
+        @include desktop {
+            padding: 0;
+        }
+        h3 {
+            font-size: 1.75rem;
+            line-height: 2.325rem;
+            font-family: georgia;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.5625rem;
+            font-family: georgia;
+            margin-bottom: 15px;
+        }
+        .message-signature {
+            text-align: right;
+            @include desktop {
+                text-align: right;
+            }
+        }
+        img {
+            height: auto;
+            display: inline-block;
+            margin: 10px 0 0;
+            max-width: 200px;
+            @include desktop {
+                margin: 20px 0 0;
+                max-width: 300px;
+            }
+        }
+    }
     form{
         padding:25px 14px;
         .input-wrap{
