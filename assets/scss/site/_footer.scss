@@ -106,6 +106,23 @@ footer{
                     max-width: 90px;
                 }
             }
+            &.great-logo {
+                display: block;
+                text-align: right;
+                padding-top: 0;
+                @include tablet-portrait{
+                    display: inline-block;
+                    text-align: left;
+                }
+                @include desktop{
+                    display: block;
+                    text-align: initial;
+                }
+                img{
+                    display: inline;
+                    max-width: 180px;
+                }
+            }
         }
     }
     .footer-social{
@@ -186,7 +203,7 @@ footer{
     }
 }
 .footer-links{
-    padding: 0px 10px 168px;
+    padding: 0px 10px 200px;
     width:100%;
     background:#1b1b1b;
     display:none;
