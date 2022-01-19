@@ -315,6 +315,33 @@ $(document).ready(function() {
         });
     }
 
+    // Series5 Masterslider
+    var seriesFiveEl  = document.getElementById('series5Slider');
+    // If statement for calling slider only on pages with it
+    if(seriesFiveEl){
+        $(function() {
+            var series5Slider = new MasterSlider();
+            series5Slider.setup('series5Slider' , {
+                width:967,    // slider standard width
+                height:1117,   // slider standard height
+                dir: 'h',
+                preload: 0,
+                view:"fade",
+                control:"arrow",
+                space:0,
+                grabCursor:true,
+                speed:5,
+                hideLayers:false,
+                instantStartLayers: true,
+                autoplay: true,
+                loop: true,
+            });
+            series5Slider.control('bullets' , {autohide:false  , dir:"h", align:"bottom"});
+            // adds Arrows navigation control to the slider.
+            series5Slider.control('arrows' , {autohide:false});
+        });
+    }
+
     // Product Masterslider
     var watchSliderSquareEl  = document.getElementById('watchSliderSquare');
     // If statement for calling slider only on pages with it
