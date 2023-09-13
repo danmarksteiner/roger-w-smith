@@ -401,7 +401,7 @@
 									<li><a href="../privacy-policy/">Privacy policy</a><span>|</span></li>
 									<li><a href="../cookie-policy/">Cookie policy</a><span>|</span></li>
 									<li><a href="../terms-of-use/">Terms of use</a><span>|</span></li>
-									<li>&copy; <script>document.write(new Date().getFullYear())</script> rwsmith watches</li>
+									<li>&copy; <script>document.write(new Date().getFullYear())</script>  Roger W Smith Ltd</li>
 								</ul>
 							</div>
 						</div>
@@ -517,7 +517,7 @@
 								<li><a href="../privacy-policy/">Privacy policy</a><span>|</span></li>
 								<li><a href="../cookie-policy/">Cookie policy</a><span>|</span></li>
 								<li><a href="../terms-of-use/">Terms of use</a><span>|</span></li>
-								<li>&copy; <script>document.write(new Date().getFullYear())</script> rwsmith watches</li>
+								<li>&copy; <script>document.write(new Date().getFullYear())</script>  Roger W Smith Ltd</li>
 							</ul>
 							<span class="footer-logo watch-makers">
 								<img src="../images/layout/british-watch-clock-makers-founder.png" alt="Roger W Smith" />
