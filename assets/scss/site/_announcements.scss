@@ -252,3 +252,25 @@
 		display: block;
 	}
 }
+.watch-article-description {
+	padding: 10px 0;
+	@include small-desktop{
+		padding: 10px;
+	}
+	li {
+		margin-bottom: 8px;
+		line-height: 25px;
+		span {
+			font-size: 18px;
+    	line-height: 25px;
+			font-family: josefin_sanssemibold;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			min-width: 200px;
+			display: block;
+			@include small-desktop{
+				display: inline-block;
+			}
+		}
+	}
+}
