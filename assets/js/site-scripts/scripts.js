@@ -247,7 +247,7 @@ $(document).ready(function() {
                 parallaxMode:"mouse",
                 hideLayers:false,
                 instantStartLayers: true,
-                // start: 43,
+                // start: 50,
             });
             slider.control('bullets' , {autohide:false  , dir:"v", align:"bottom"});
             // adds Arrows navigation control to the slider.
@@ -324,6 +324,60 @@ $(document).ready(function() {
             series5Slider.setup('series5Slider' , {
                 width:967,    // slider standard width
                 height:1117,   // slider standard height
+                dir: 'h',
+                preload: 0,
+                view:"fade",
+                control:"arrow",
+                space:0,
+                grabCursor:true,
+                speed:5,
+                hideLayers:false,
+                instantStartLayers: true,
+                autoplay: true,
+                loop: true,
+            });
+            series5Slider.control('bullets' , {autohide:false  , dir:"h", align:"bottom"});
+            // adds Arrows navigation control to the slider.
+            series5Slider.control('arrows' , {autohide:false});
+        });
+    }
+
+    // Series1 Auction Masterslider
+    var seriesOneEl  = document.getElementById('series1Slider');
+    // If statement for calling slider only on pages with it
+    if(seriesOneEl){
+        $(function() {
+            var series5Slider = new MasterSlider();
+            series5Slider.setup('series1Slider' , {
+                width:605,    // slider standard width
+                height: 550,   // slider standard height
+                dir: 'h',
+                preload: 0,
+                view:"fade",
+                control:"arrow",
+                space:0,
+                grabCursor:true,
+                speed:5,
+                hideLayers:false,
+                instantStartLayers: true,
+                autoplay: true,
+                loop: true,
+            });
+            series5Slider.control('bullets' , {autohide:false  , dir:"h", align:"bottom"});
+            // adds Arrows navigation control to the slider.
+            series5Slider.control('arrows' , {autohide:false});
+        });
+    }
+
+    // Series1 Auction Masterslider
+    var seriesOneTwoEl  = document.getElementById('series1Slider2');
+    // If statement for calling slider only on pages with it
+    if(seriesOneTwoEl){
+        $(function() {
+            var series5Slider = new MasterSlider();
+            series5Slider.setup('series1Slider2' , {
+                width:605,    // slider standard width
+                height: 550,   // slider standard height
                 dir: 'h',
                 preload: 0,
                 view:"fade",
