@@ -47,6 +47,15 @@
 </script>
 </head>
 <body class="watches">
+	<div class="auction-banner-mobile">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col col-xs-12">
+					<p>British Watchmakers’ Day AUCTION NOW LIVE: for details on how to bid for the Series 1 special edition click <a href="https://www.rwsmithwatches.com/auction/british-watchmakers-day/">here</a>. Auction closes in <span class="countdown">00 days, 00 hours, 00 minutes</span> at 3pm (GMT) March 9th 2024.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Content wrap sets padding at bottom -->
 	<div class="content-wrap">
 		<!-- Inner wrap allows correct z-indexing of fixed footer -->
@@ -67,6 +76,15 @@
 
 							<!-- Main Navigation Start -->
 							<nav id="mainNavigation" class="main-navigation">
+								<div class="auction-banner-desktop">
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col col-xs-12">
+												<p>British Watchmakers’ Day AUCTION NOW LIVE: for details on how to bid for the Series 1 special edition click <a href="https://www.rwsmithwatches.com/auction/british-watchmakers-day/">here</a>. Auction closes in <span class="countdown">00 days, 00 hours, 00 minutes</span> at 3pm (GMT) March 9th 2024.</p>
+											</div>
+										</div>
+									</div>
+								</div>
 								<ul>
 									<!-- Inline markup for inline block -->
 									<li><a class="icon-home" href="../../"><span>Home</span></a></li><li><a href="../../the-watchmaker/">The watchmaker</a></li><li><a href="../../watches/">Watches</a></li><li><a href="../../journal">Journal</a></li><li><a href="../../timeline/">Timeline</a></li><li><a href="../../contact">Contact</a></li>
@@ -238,16 +256,16 @@
 						<!-- Inner padding class used for equal heights -->
 						<div class="product-roger-inner">
 							<h3>Series 4</h3>
-							<h3>Roger’s personal remarks</h3>
-							<p>&ldquo;The Series 4 represents my ultimate challenge and is, in many respects my ultimate watch. It is certainly the most complicated, but that wasn’t really the challenge.</p>
+							<h3 class="rogers-notes">Roger’s notes</h3>
+							<p>&ldquo;An uncompromising principle that George Daniels drummed into me as a young man was the importance of clear and simple design. George absolutely hated watches which looked like an Enigma machine… and needed an Alan Turing to work out the time! As we curate the revival of British watchmaking, I believe ‘elegant simplicity’ must be the core of our collective design creed.</p>
 							<br/>
-							<p>Something George Daniels drummed into me as a young man were his ultimate principles of watch design - clarity and simplicity. George absolutely hated watches which looked like an Enigma machine, and needed an Alan Turing to work out the time! As we curate a new British watchmaking tradition, I believe that elegant simplicity must be our design creed.</p>
+							<p>So, with the Series 4, celebrating the complexity of the complication wasn’t the quest. The real challenge was to successfully conceal a complex function within a deceptively simply aesthetic, while preserving the primary purpose of a watch - to tell the time in an instant.</p>
 							<br/>
-							<p>So, with the Series 4, the complexity wasn’t really the quest. Anyone can create a carbuncle! The real challenge was achieving this complexity whilst concealing it within a deceptively simply aesthetic - and preserving the primary purpose of a watch - to tell the time in an instant.</p>
+							<p>The function which had always stumped watchmakers was the date-hand, since this travels and sits over key date information for several days at a time thus compromising the dial’s legibility.</p>
 							<br/>
-							<p>The function which has always stumped watchmakers is the travelling date-hand, since this travels and sits over key date information for several days at a time thus compromising the dial’s legibility.</p>
+							<p>After several years of drawings and experimentation I came up with my new Travelling Aperture, which I believe is the first time this complication has been created. It simply reverses the function, by having the Travelling Aperture orbit the outer edge of the dial, thus removing the need for that problematic hand!</p>
 							<br/>
-							<p>After several years of drawings and experimentation I came up with my new Travelling Aperture, which I believe is the first time this complication has been created. It simply reverses the function, by having the Travelling Aperture orbit the outer edge of the dial, thus removing the need for that problematic hand!&rdquo;</p>
+							<p>Like George, I think a mark of success for a new complication is to see it adopted by other watchmakers - especially the larger manufacturers, and the eagle eyed collector will have no doubt spotted our travelling aperture being adopted by some major brands.&rdquo;</p>
 							<br/>
 							<span>_____</span>
 							<a class="pdf-link" href="../../downloads/watch-specs/RWS_Series_4.pdf" target="_blank"><span class="icon-icon-pdf"></span><span class="pdf-link-text">Download Specification</span></a>
@@ -313,7 +331,7 @@
 
 									<!-- Copyright -->
 									<li>
-										<a class="copy-text">&copy; <script>document.write(new Date().getFullYear())</script> rwsmith watches</a>
+										<a class="copy-text">&copy; <script>document.write(new Date().getFullYear())</script> Roger W Smith Ltd</a>
 									</li>
 									<!-- Copyright -->
 								</ul>
@@ -454,5 +472,40 @@
 	<!-- Content Wrap End -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<script>document.write("<script type='text/javascript' src='../../js/main.min.js?v=" + Date.now() + "'><\/script>");</script>
+	<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Mar 9, 2024 15:00:00 GMT+0000").getTime();
+    
+    // Update the countdown every 1 second
+    var x = setInterval(function() {
+    
+        // Get today's date and time
+        var now = new Date().getTime();
+            
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+            
+        // Time calculations for days, hours, minutes
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        
+        // Get all elements with the class name "countdown"
+        var countdownElements = document.getElementsByClassName("countdown");
+        
+        // Display the result in each countdown element
+        for(var i = 0; i < countdownElements.length; i++) {
+            countdownElements[i].innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes";
+        }
+            
+        // If the countdown is finished, update text for all elements
+        if (distance < 0) {
+            clearInterval(x);
+            for(var i = 0; i < countdownElements.length; i++) {
+                countdownElements[i].innerHTML = "Ended";
+            }
+        }
+    }, 1000);
+	</script>
 </body>
 </html>
