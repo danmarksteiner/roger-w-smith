@@ -50,6 +50,15 @@
 </script>
 </head>
 <body class="contact-us-page">
+	<div class="auction-banner-mobile">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col col-xs-12">
+					<p>British Watchmakers’ Day AUCTION NOW LIVE: for details on how to bid for the Series 1 special edition click <a href="https://www.rwsmithwatches.com/auction/british-watchmakers-day/">here</a>. Auction closes in <span class="countdown">00 days, 00 hours, 00 minutes</span> at 3pm (GMT) March 9th 2024.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Content wrap sets padding at bottom -->
 	<div class="content-wrap">
 		<!-- Inner wrap allows correct z-indexing of fixed footer -->
@@ -70,6 +79,15 @@
 
 							<!-- Main Navigation Start -->
 							<nav id="mainNavigation" class="main-navigation">
+							<div class="auction-banner-desktop">
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col col-xs-12">
+												<p>British Watchmakers’ Day AUCTION NOW LIVE: for details on how to bid for the Series 1 special edition click <a href="https://www.rwsmithwatches.com/auction/british-watchmakers-day/">here</a>. Auction closes in <span class="countdown">00 days, 00 hours, 00 minutes</span> at 3pm (GMT) March 9th 2024.</p>
+											</div>
+										</div>
+									</div>
+								</div>
 								<ul>
 									<!-- Inline markup for inline block -->
 									<li><a class="icon-home" href="../"><span>Home</span></a></li><li><a href="../the-watchmaker/">The watchmaker</a></li><li><a href="../watches/">Watches</a></li><li><a href="../journal/">Journal</a></li><li><a href="../timeline/">Timeline</a></li><li><a href="#">Contact</a></li>
@@ -121,11 +139,11 @@
 							<!-- Form Start -->
 							<div class="contact-form">
 								<div class="message">
-									<h3>I&#x2019;m putting a &#x2018;pause&#x2019; on all new orders until further notice&#x2026;</h3>
-									<p>Ever since establishing Roger W. Smith in 2001, I’ve been committed to being uncompromising in my ethos - to make just a few watches each year and to explore new frontiers in horology.</p>
-									<p>After unprecedented interest in my watches in recent years, I have decided to press the &#x2018;pause button&#x2019; on accepting any new orders, until further notice.</p>
-									<p>For now, I will focus entirely on orders from my existing clients. I’ve also made this decision to give me enough breathing space to continue exploring new ideas in my horological work.</p>
-									<p>I know this will be disappointing for new clients hoping to order a Roger W. Smith watch, but I hope everyone will understand that closing my order book for the time being is also vital to maintain the integrity of my approach to watchmaking.</p>
+									<h3>All new orders remain paused</h3>
+									<p>After unprecedented interest in my watches in recent years, in 2021, I decided to press the ‘pause button’ on accepting any new orders, until further notice.</p>
+									<p>For now, we continue to focus on orders from existing Roger W. Smith owners and clients. While helping to protect the integrity of our horological approach, this also assures our commitment to rarity.</p>
+									<p>This has also allowed me to continue exploring new ideas in my horological work. What continues to truly motivate me is to explore new frontiers in mechanical watch performance.</p>
+									<p>We continually review our production of watches and, as soon as we feel comfortable re-opening our order book, we will make an announcement.</p>
 									<div class="message-signature">
 										<img src="../images/layout/rws-signature.jpg" alt="Roger W Smith Signature" />
 									</div>
@@ -536,5 +554,40 @@
 	</div>
 	<!-- Content Wrap End -->
 	<script>document.write("<script type='text/javascript' src='../js/main.min.js?v=" + Date.now() + "'><\/script>");</script>
+	<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Mar 9, 2024 15:00:00 GMT+0000").getTime();
+    
+    // Update the countdown every 1 second
+    var x = setInterval(function() {
+    
+        // Get today's date and time
+        var now = new Date().getTime();
+            
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+            
+        // Time calculations for days, hours, minutes
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        
+        // Get all elements with the class name "countdown"
+        var countdownElements = document.getElementsByClassName("countdown");
+        
+        // Display the result in each countdown element
+        for(var i = 0; i < countdownElements.length; i++) {
+            countdownElements[i].innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes";
+        }
+            
+        // If the countdown is finished, update text for all elements
+        if (distance < 0) {
+            clearInterval(x);
+            for(var i = 0; i < countdownElements.length; i++) {
+                countdownElements[i].innerHTML = "Ended";
+            }
+        }
+    }, 1000);
+	</script>
 </body>
 </html>

@@ -545,7 +545,12 @@ $(document).ready(function() {
 
             /* Parallax config for layers */
             MSScrollParallax.setup(slider, 10, 80, true);
-
+            
+            $("#goToLastSlide").click(function() {
+                setTimeout(function() {
+                    slider.api.gotoSlide(slider.api.count() - 1);
+                }, 100);
+            });
         });
     }
 
@@ -604,6 +609,12 @@ $(document).ready(function() {
             MSScrollParallax.setup(slider, 10, 80, true);
             $( window ).on( "orientationchange", function( event ) {
                 window.location.reload();
+            });
+            
+            $("#goToLastSlide").click(function() {
+                setTimeout(function() {
+                    slider.api.gotoSlide(slider.api.count() - 1);
+                }, 100);
             });
         });
     }

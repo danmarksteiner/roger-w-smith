@@ -143,7 +143,7 @@
         }
         @media only screen and (min-width: 1280px) {
             left: initial;
-            right: 32px;
+            right: 300px;
             bottom: 32px;
         }
         // @include tablet-portrait{
@@ -1639,4 +1639,50 @@
             }
         }
     }
+}
+.last-slide {
+    position: fixed;
+    bottom: 25px;
+    right: 0;
+    padding-right: 35px;
+    width: 255px;
+    height: 50px;
+    display: block;
+    z-index: 99;
+    border: none;
+    background: none;
+    font-family: $fontNav;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-animation: fade-offset2 2s ease-in 4s forwards;
+    animation: fade-offset2 2s ease-in 4s forwards;
+    text-align: right;
+    @media only screen and (min-width: 1280px) {
+        font-size: 24px;
+        padding-right: 50px;
+        right: 20px;
+    }
+    &:before, &::after {
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        font-size: 2rem;
+        font-family: icomoon!important;
+        font-style: normal;
+        text-transform: none;
+        line-height: 1;
+        content: "\e901";
+        scale: 50%;
+        @media only screen and (min-width: 1280px) {
+            scale: 100%;
+        }
+    }
+    &::after {
+        top: 20px;
+        @media only screen and (min-width: 1280px) {
+            top: 25px;
+        }
+    }  
 }
