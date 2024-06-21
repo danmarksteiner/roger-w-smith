@@ -113,10 +113,19 @@ header {
     }
     ul{
         text-align:center;
+        @include small-desktop{
+            display: grid;
+            grid-template-columns: 5% repeat(6, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            align-items: center;
+            justify-items: center;
+        }
         li{
             @include small-desktop{
                 @include inline-block;
-                width:19%;
+                // width:19%;
                 &:first-child{
                     width:5%;
                 }
@@ -126,6 +135,9 @@ header {
                     background: url('../images/content/journal_single.png') no-repeat center center;
                     background-size: 126px; 
                     text-indent: -9999px;
+                    width: 126px;
+                    height: auto;
+                    margin: auto;
                     &:hover {
                         background: url('../images/content/journal_single_hover.png') no-repeat center center;
                         background-size: 126px; 
