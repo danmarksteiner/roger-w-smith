@@ -70,6 +70,17 @@
     background-color: #1b1b1b;
     text-align: center;
     padding: 50px 0;
+    &.watches-title-gallery {
+        background: url('../images/layout/gallery-teaser-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 0;
+        a {
+            padding: 150px 0;
+            display: block;
+        }
+    }
     h2 {
         color: #FFFFFF;
         font-family: "josefin_sanssemibold";
@@ -90,6 +101,9 @@
             max-width: 210px;
             margin-bottom: 18px;
         }
+    }
+    .watches-title-journal {
+        margin-bottom: 20px;
     }
     .watches-title-stroke {
         max-width: 265px;
